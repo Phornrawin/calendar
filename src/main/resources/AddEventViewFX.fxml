@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import com.gluonhq.charm.glisten.control.TextField?>
+
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.DatePicker?>
 <?import javafx.scene.control.Label?>
@@ -9,8 +9,16 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
+<?import javafx.scene.control.TextField?>
+<?import java.lang.Integer?>
 <AnchorPane prefHeight="543.0" prefWidth="517.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.AddEventViewController">
    <children>
+       <fx:define>
+           <Integer fx:id="minH" fx:value="0"/>
+           <Integer fx:id="maxH" fx:value="23"/>
+           <Integer fx:id="minM" fx:value="0"/>
+           <Integer fx:id="maxM" fx:value="59"/>
+       </fx:define>
       <Label layoutX="14.0" layoutY="14.0" text="Add Event">
          <font>
             <Font size="24.0" />
@@ -27,13 +35,13 @@
             <Font size="18.0" />
          </font>
       </Label>
-      <Spinner fx:id="hourSpinner" layoutX="188.0" layoutY="108.0" prefHeight="31.0" prefWidth="74.0" />
+      <Spinner fx:id="hourSpinner" layoutX="188.0" layoutY="108.0" prefHeight="31.0" prefWidth="74.0" min="$minH" max="$maxH" />
       <Label layoutX="274.0" layoutY="110.0" text=":">
          <font>
             <Font size="18.0" />
          </font>
       </Label>
-      <Spinner fx:id="minSpiner" layoutX="288.0" layoutY="108.0" prefHeight="31.0" prefWidth="74.0" />
+      <Spinner fx:id="minSpiner" layoutX="288.0" layoutY="108.0" prefHeight="31.0" prefWidth="74.0" min="$minM" max="$maxM" />
       <Label layoutX="382.0" layoutY="113.0" text="24 hrs." textFill="#868282" />
       <Label layoutX="36.0" layoutY="163.0" text="Enter Topic" />
       <TextField fx:id="topicTextfield" layoutX="36.0" layoutY="184.0" prefHeight="31.0" prefWidth="440.0" />
