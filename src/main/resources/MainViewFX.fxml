@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="664.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.MainView">
+   <children>
+      <Label layoutX="141.0" layoutY="14.0" text="Appointment Schedule">
+         <font>
+            <Font size="32.0" />
+         </font>
+      </Label>
+      <AnchorPane layoutX="18.0" layoutY="71.0" prefHeight="47.0" prefWidth="563.0">
+         <children>
+            <DatePicker fx:id="select_datepicker" layoutX="221.0" layoutY="5.0" />
+            <Label layoutX="120.0" layoutY="7.0" text="Select Day:">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <TextArea fx:id="showEvent_textarea" layoutX="61.0" layoutY="170.0" prefHeight="414.0" prefWidth="484.0" />
+      <Label fx:id="selectday_textview" layoutX="61.0" layoutY="137.0" text="Today">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Button layoutX="256.0" layoutY="612.0" mnemonicParsing="false" text="Add Event" />
+   </children>
+</AnchorPane>
