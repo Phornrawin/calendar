@@ -7,21 +7,22 @@ import java.util.Date;
  * Created by Phornrawin on 27/8/2560.
  */
 public class Schedule {
-    private ArrayList<Date> dateArrayList;
+    private ArrayList<DateTable> dateTables;
+
 
     public Schedule() {
-        this.dateArrayList = new ArrayList<Date>();
+        this.dateTables = new ArrayList<DateTable>();
     }
 
-    public void addDate(Date date){
-        dateArrayList.add(date);
+    public void addDateTable(DateTable dt){
+        dateTables.add(dt);
     }
 
-    public ArrayList<Date> getDateArrayList() {
-        return dateArrayList;
+    public ArrayList<DateTable> getDateTables() {
+        return dateTables;
     }
 
-    public void setDateArrayList(ArrayList<Date> dateArrayList) {
-        this.dateArrayList = dateArrayList;
+    public void setDateTables(ArrayList<DateTable> dateTables) {
+        this.dateTables = dateTables;
     }
 }
