@@ -43,6 +43,7 @@ public class MainViewController{
     @FXML
     public void onClickNewEvent(){
         try {
+            System.out.println("In onClickNewEvent in MainView");
             // Load root layout from fxml file.
             Stage secondStage = new Stage();
             AnchorPane mainLayout;

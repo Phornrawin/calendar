@@ -4,20 +4,21 @@ package model;
  * Created by Phornrawin on 27/8/2560.
  */
 public class Event {
-    private String name, topic, detail;
+    private String topic, detail, startHrs, startMins;
 
-    public Event(String name, String topic, String detail) {
-        setName(name);
+    public String getStartHrs() {
+        return startHrs;
+    }
+
+    public String getStartMins() {
+        return startMins;
+    }
+
+    public Event(String topic, String detail, String startHrs, String startMins) {
         setTopic(topic);
         setDetail(detail);
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
+        setStartHrs(startHrs);
+        setStartMins(startMins);
     }
 
     public String getTopic() {
@@ -34,5 +35,13 @@ public class Event {
 
     public void setDetail(String detail) {
         this.detail = detail;
+    }
+
+    public void setStartHrs(String startHrs) {
+        this.startHrs = startHrs;
+    }
+
+    public void setStartMins(String startMins) {
+        this.startMins = startMins;
     }
 }

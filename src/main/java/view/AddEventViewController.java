@@ -1,7 +1,14 @@
 package view;
 
+import controller.MainController;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
+import jdk.nashorn.internal.ir.CallNode;
+import model.DateTable;
+import model.Event;
+
+import java.time.ZoneId;
+import java.util.Date;
 
 /**
  * Created by Phornrawin on 30/8/2560.
@@ -11,7 +18,7 @@ public class AddEventViewController {
     private DatePicker datePickerSelect;
 
     @FXML
-    private Spinner spinnerHour, spinnerMins;
+    private Spinner<Integer> spinnerHour, spinnerMins;
 
     @FXML
     private TextField textfieldTopic;
@@ -22,6 +29,8 @@ public class AddEventViewController {
     @FXML
     private Button btnAddEvent;
 
+    private MainController controller;
+
     public AddEventViewController() {
     }
 
@@ -30,7 +39,17 @@ public class AddEventViewController {
 
     }
 
+    @FXML
     public void onClickAddEvent(){
+        Date date = Date.from(datePickerSelect.getValue().atStartOfDay(ZoneId.systemDefault()).toInstant());
+        String startHrs = spinnerHour.getValue().toString();
+        String startmins = spinnerMins.getValue().toString();
+        String topic = textfieldTopic.getText().toString();
+        String detail = textAreaDetail.getText().toString();
+
+        Event event = new Event(topic, detail, startHrs, startmins);
+
+
 
     }
 }

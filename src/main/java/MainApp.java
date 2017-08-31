@@ -2,17 +2,21 @@
  * Created by Phornrawin on 30/8/2560.
  */
 
+import controller.MainController;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
+import view.MainViewController;
 
 import java.io.IOException;
 
 public class MainApp extends Application {
 
-    private Stage primaryStage, addEventStage;
+    private Stage primaryStage;
+    private MainController controller;
+    private MainViewController mainview;
     private AnchorPane mainLayout;
 
     public static void main(String[] args) {
@@ -23,6 +27,7 @@ public class MainApp extends Application {
     public void start(Stage primaryStage) {
         this.primaryStage = primaryStage;
         this.primaryStage.setTitle("Appointment Schedule");
+        this.controller = new MainController();
         initMainLayout();
     }
 
@@ -48,10 +53,6 @@ public class MainApp extends Application {
 
     public Stage getPrimaryStage() {
         return primaryStage;
-    }
-
-    public Stage getAddEventStage() {
-        return addEventStage;
     }
 
     public AnchorPane getMainLayout() {

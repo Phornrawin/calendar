@@ -16,12 +16,13 @@
       </Label>
       <AnchorPane layoutX="18.0" layoutY="71.0" prefHeight="47.0" prefWidth="563.0">
          <children>
-            <DatePicker fx:id="selectDateSpiner" layoutX="221.0" layoutY="5.0" />
-            <Label layoutX="120.0" layoutY="7.0" text="Select Day:">
+            <DatePicker fx:id="selectDateSpiner" layoutX="173.0" layoutY="5.0" />
+            <Label layoutX="81.0" layoutY="7.0" text="Select Day:">
                <font>
                   <Font size="18.0" />
                </font>
             </Label>
+            <Button layoutX="423.0" layoutY="5.0" mnemonicParsing="false" text="See event" />
          </children>
       </AnchorPane>
       <TextArea fx:id="showEventTextArea" layoutX="61.0" layoutY="170.0" prefHeight="414.0" prefWidth="484.0" />
@@ -30,6 +31,6 @@
             <Font name="System Bold" size="18.0" />
          </font>
       </Label>
-      <Button fx:id="btnAddEvent" layoutX="256.0" layoutY="612.0" mnemonicParsing="false" text="Add Event" />
+      <Button fx:id="btnAddEvent" layoutX="256.0" layoutY="612.0" mnemonicParsing="false" onAction="#on" text="Add Event" />
    </children>
 </AnchorPane>
