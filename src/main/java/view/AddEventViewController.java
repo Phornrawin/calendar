@@ -48,8 +48,15 @@ public class AddEventViewController {
         String detail = textAreaDetail.getText().toString();
 
         Event event = new Event(topic, detail, startHrs, startmins);
+//        if (controller.getSchedule().checkDate(date)){
+//
+//        }
 
 
 
+    }
+
+    public void setController(MainController controller){
+        this.controller = controller;
     }
 }

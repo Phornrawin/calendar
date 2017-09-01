@@ -7,8 +7,10 @@ import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.layout.AnchorPane;
+import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
 import view.MainViewController;
+import javafx.event.ActionEvent;
 
 import java.io.IOException;
 
@@ -16,8 +18,8 @@ public class MainApp extends Application {
 
     private Stage primaryStage;
     private MainController controller;
-    private MainViewController mainview;
-    private AnchorPane mainLayout;
+    private MainViewController mainView;
+    private Pane mainLayout;
 
     public static void main(String[] args) {
         launch(args);
@@ -40,6 +42,9 @@ public class MainApp extends Application {
             FXMLLoader loader = new FXMLLoader();
             loader.setLocation(MainApp.class.getResource("/MainViewFX.fxml"));
             mainLayout = (AnchorPane) loader.load();
+            mainView = loader.getController();
+            mainView.setController(controller);
+
 
             // Show the scene containing the root layout.
             Scene scene = new Scene(mainLayout);
@@ -55,7 +60,7 @@ public class MainApp extends Application {
         return primaryStage;
     }
 
-    public AnchorPane getMainLayout() {
+    public Pane getMainLayout() {
         return mainLayout;
     }
 }

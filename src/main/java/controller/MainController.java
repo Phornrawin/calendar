@@ -10,14 +10,17 @@ public class MainController {
     private Schedule schedule;
 
     public MainController() {
+
         schedule = new Schedule();
     }
 
     public void addEventToDateTable(DateTable date){
+
         schedule.addDateTable(date);
     }
 
     public Schedule getSchedule() {
+
         return schedule;
     }
 }

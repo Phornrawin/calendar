@@ -3,10 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="37a5deaa-3fcf-4b43-b29b-5f0ba7a7f8b4" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/calendar.iml" afterPath="$PROJECT_DIR$/calendar.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/MainApp.java" afterPath="$PROJECT_DIR$/src/main/java/MainApp.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/controller/MainController.java" afterPath="$PROJECT_DIR$/src/main/java/controller/MainController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/model/Event.java" afterPath="$PROJECT_DIR$/src/main/java/model/Event.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/model/Schedule.java" afterPath="$PROJECT_DIR$/src/main/java/model/Schedule.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/view/AddEventViewController.java" afterPath="$PROJECT_DIR$/src/main/java/view/AddEventViewController.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/view/MainViewController.java" afterPath="$PROJECT_DIR$/src/main/java/view/MainViewController.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/MainViewFX.fxml" afterPath="$PROJECT_DIR$/src/main/resources/MainViewFX.fxml" />
@@ -23,24 +22,26 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pom.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="Event.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/model/Event.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="500">
+            <state relative-caret-position="378">
               <caret line="22" column="0" lean-forward="false" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
               <folding>
-                <element signature="e#172#173#0" expanded="true" />
-                <element signature="e#203#204#0" expanded="true" />
+                <element signature="e#239#240#0" expanded="false" />
+                <element signature="e#271#272#0" expanded="false" />
+                <element signature="e#509#510#0" expanded="false" />
+                <element signature="e#537#538#0" expanded="false" />
+                <element signature="e#579#580#0" expanded="false" />
+                <element signature="e#613#614#0" expanded="false" />
+                <element signature="e#646#647#0" expanded="false" />
+                <element signature="e#675#676#0" expanded="false" />
+                <element signature="e#719#720#0" expanded="false" />
+                <element signature="e#755#756#0" expanded="false" />
+                <element signature="e#803#804#0" expanded="false" />
+                <element signature="e#843#844#0" expanded="false" />
+                <element signature="e#893#894#0" expanded="false" />
+                <element signature="e#935#936#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -49,32 +50,23 @@
       <file leaf-file-name="Schedule.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/model/Schedule.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="600">
-              <caret line="25" column="8" lean-forward="false" selection-start-line="25" selection-start-column="8" selection-end-line="25" selection-end-column="8" />
+            <state relative-caret-position="630">
+              <caret line="28" column="20" lean-forward="false" selection-start-line="28" selection-start-column="20" selection-end-line="28" selection-end-column="20" />
               <folding>
-                <element signature="e#208#209#0" expanded="true" />
-                <element signature="e#268#269#0" expanded="true" />
-                <element signature="e#313#314#0" expanded="true" />
-                <element signature="e#347#348#0" expanded="true" />
-                <element signature="e#398#399#0" expanded="true" />
-                <element signature="e#431#432#0" expanded="true" />
-                <element signature="e#497#498#0" expanded="true" />
-                <element signature="e#541#542#0" expanded="true" />
+                <element signature="e#703#704#0" expanded="true" />
+                <element signature="e#747#748#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MainApp.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="MainApp.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/MainApp.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="432">
-              <caret line="18" column="40" lean-forward="false" selection-start-line="18" selection-start-column="40" selection-end-line="18" selection-end-column="40" />
+            <state relative-caret-position="-357">
+              <caret line="13" column="0" lean-forward="true" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
               <folding>
                 <element signature="n#!!doc" expanded="true" />
-                <element signature="imports" expanded="true" />
-                <element signature="e#1523#1524#0" expanded="true" />
-                <element signature="e#1556#1557#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -83,22 +75,26 @@
       <file leaf-file-name="MainViewController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/view/MainViewController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="246">
-              <caret line="45" column="62" lean-forward="false" selection-start-line="45" selection-start-column="62" selection-end-line="45" selection-end-column="62" />
+            <state relative-caret-position="-370">
+              <caret line="40" column="29" lean-forward="true" selection-start-line="40" selection-start-column="29" selection-end-line="40" selection-end-column="29" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#1912#1913#0" expanded="true" />
+                <element signature="e#1956#1957#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AddEventViewController.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="AddEventViewController.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/view/AddEventViewController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="18">
-              <caret line="31" column="38" lean-forward="false" selection-start-line="31" selection-start-column="38" selection-end-line="31" selection-end-column="38" />
+            <state relative-caret-position="450">
+              <caret line="52" column="11" lean-forward="true" selection-start-line="50" selection-start-column="10" selection-end-line="52" selection-end-column="11" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#1322#1323#0" expanded="true" />
+                <element signature="e#1366#1367#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -106,22 +102,22 @@
       </file>
       <file leaf-file-name="AddEventViewFX.fxml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/resources/AddEventViewFX.fxml">
-          <provider editor-type-id="JavaFX-Scene-Builder">
-            <state />
-          </provider>
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="525">
               <caret line="25" column="14" lean-forward="false" selection-start-line="25" selection-start-column="14" selection-end-line="25" selection-end-column="14" />
               <folding />
             </state>
           </provider>
+          <provider editor-type-id="JavaFX-Scene-Builder">
+            <state />
+          </provider>
         </entry>
       </file>
       <file leaf-file-name="DateTable.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/model/DateTable.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="432">
-              <caret line="20" column="0" lean-forward="false" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
+            <state relative-caret-position="376">
+              <caret line="15" column="5" lean-forward="false" selection-start-line="15" selection-start-column="5" selection-end-line="15" selection-end-column="5" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -131,30 +127,24 @@
       </file>
       <file leaf-file-name="MainViewFX.fxml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/resources/MainViewFX.fxml">
-          <provider editor-type-id="JavaFX-Scene-Builder">
-            <state />
-          </provider>
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="441">
+          <provider editor-type-id="text-editor">
+            <state relative-caret-position="238">
               <caret line="21" column="38" lean-forward="false" selection-start-line="21" selection-start-column="38" selection-end-line="21" selection-end-column="38" />
               <folding />
             </state>
+          </provider>
+          <provider selected="true" editor-type-id="JavaFX-Scene-Builder">
+            <state />
           </provider>
         </entry>
       </file>
       <file leaf-file-name="MainController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/controller/MainController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="483">
-              <caret line="23" column="0" lean-forward="true" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
+            <state relative-caret-position="621">
+              <caret line="24" column="5" lean-forward="false" selection-start-line="24" selection-start-column="5" selection-end-line="24" selection-end-column="5" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#206#207#0" expanded="true" />
-                <element signature="e#247#248#0" expanded="true" />
-                <element signature="e#301#302#0" expanded="true" />
-                <element signature="e#344#345#0" expanded="true" />
-                <element signature="e#381#382#0" expanded="true" />
-                <element signature="e#412#413#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -189,16 +179,16 @@
         <option value="$PROJECT_DIR$/src/main/java/view/MainViewFX.fxml" />
         <option value="$PROJECT_DIR$/src/main/java/view/MainView.java" />
         <option value="$PROJECT_DIR$/src/main/java/view/MainApp.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/MainViewFX.fxml" />
         <option value="$PROJECT_DIR$/src/main/java/MainApp2.java" />
         <option value="$PROJECT_DIR$/src/main/java/model/DateTable.java" />
         <option value="$PROJECT_DIR$/src/main/resources/AddEventViewFX.fxml" />
-        <option value="$PROJECT_DIR$/src/main/java/view/MainViewController.java" />
         <option value="$PROJECT_DIR$/src/main/java/model/Event.java" />
-        <option value="$PROJECT_DIR$/src/main/java/model/Schedule.java" />
-        <option value="$PROJECT_DIR$/src/main/java/controller/MainController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/view/AddEventViewController.java" />
         <option value="$PROJECT_DIR$/src/main/java/MainApp.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/MainViewFX.fxml" />
+        <option value="$PROJECT_DIR$/src/main/java/view/MainViewController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/controller/MainController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/model/Schedule.java" />
+        <option value="$PROJECT_DIR$/src/main/java/view/AddEventViewController.java" />
       </list>
     </option>
   </component>
@@ -248,7 +238,6 @@
     <panes>
       <pane id="Scope" />
       <pane id="PackagesPane" />
-      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -403,6 +392,7 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -729,7 +719,14 @@
       <option name="project" value="LOCAL" />
       <updated>1504109429244</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="commit in  paolo keset&#10;write onClick method in AddEventViewController&#10;and built Schedule object in MainController">
+      <created>1504198517220</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1504198517220</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -739,18 +736,19 @@
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32960895" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.28715083" sideWeight="0.5128894" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.19441341" sideWeight="0.48711064" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.26256984" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.041340783" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22126746" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19280344" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -761,7 +759,6 @@
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32960895" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
@@ -782,14 +779,15 @@
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32960895" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.19441341" sideWeight="0.48711064" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21482277" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.19441341" sideWeight="0.48711064" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.041340783" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2244898" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -824,7 +822,8 @@
     <MESSAGE value="commit in 301&#10;build MainViewController" />
     <MESSAGE value="commit in home&#10;build DateTable&#10;and change type arrayList&lt;Date&gt; --&gt; arrayList&lt;DateTable&gt;" />
     <MESSAGE value="commit in home again&#10;set DatePicker hours mins&#10;and test run app &#10;result can run but can't push add event button" />
-    <option name="LAST_COMMIT_MESSAGE" value="commit in home again&#10;set DatePicker hours mins&#10;and test run app &#10;result can run but can't push add event button" />
+    <MESSAGE value="commit in  paolo keset&#10;write onClick method in AddEventViewController&#10;and built Schedule object in MainController" />
+    <option name="LAST_COMMIT_MESSAGE" value="commit in  paolo keset&#10;write onClick method in AddEventViewController&#10;and built Schedule object in MainController" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -835,17 +834,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/model/Event.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="672">
-          <caret line="32" column="5" lean-forward="true" selection-start-line="32" selection-start-column="5" selection-end-line="32" selection-end-column="5" />
-          <folding>
-            <element signature="e#172#173#0" expanded="true" />
-            <element signature="e#203#204#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -859,8 +847,20 @@
         <state relative-caret-position="252">
           <caret line="12" column="5" lean-forward="false" selection-start-line="12" selection-start-column="5" selection-end-line="12" selection-end-column="5" />
           <folding>
-            <element signature="e#172#173#0" expanded="true" />
-            <element signature="e#203#204#0" expanded="true" />
+            <element signature="e#239#240#0" expanded="false" />
+            <element signature="e#271#272#0" expanded="false" />
+            <element signature="e#509#510#0" expanded="false" />
+            <element signature="e#537#538#0" expanded="false" />
+            <element signature="e#579#580#0" expanded="false" />
+            <element signature="e#613#614#0" expanded="false" />
+            <element signature="e#646#647#0" expanded="false" />
+            <element signature="e#675#676#0" expanded="false" />
+            <element signature="e#719#720#0" expanded="false" />
+            <element signature="e#755#756#0" expanded="false" />
+            <element signature="e#803#804#0" expanded="false" />
+            <element signature="e#843#844#0" expanded="false" />
+            <element signature="e#893#894#0" expanded="false" />
+            <element signature="e#935#936#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -870,14 +870,8 @@
         <state relative-caret-position="567">
           <caret line="27" column="0" lean-forward="false" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
           <folding>
-            <element signature="e#208#209#0" expanded="true" />
-            <element signature="e#268#269#0" expanded="true" />
-            <element signature="e#313#314#0" expanded="true" />
-            <element signature="e#347#348#0" expanded="true" />
-            <element signature="e#398#399#0" expanded="true" />
-            <element signature="e#431#432#0" expanded="true" />
-            <element signature="e#497#498#0" expanded="true" />
-            <element signature="e#541#542#0" expanded="true" />
+            <element signature="e#703#704#0" expanded="true" />
+            <element signature="e#747#748#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -888,9 +882,6 @@
           <caret line="8" column="0" lean-forward="false" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
           <folding>
             <element signature="n#!!doc" expanded="true" />
-            <element signature="imports" expanded="true" />
-            <element signature="e#1523#1524#0" expanded="true" />
-            <element signature="e#1556#1557#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -901,25 +892,19 @@
           <caret line="5" column="27" lean-forward="false" selection-start-line="5" selection-start-column="27" selection-end-line="5" selection-end-column="27" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#206#207#0" expanded="true" />
-            <element signature="e#247#248#0" expanded="true" />
-            <element signature="e#301#302#0" expanded="true" />
-            <element signature="e#344#345#0" expanded="true" />
-            <element signature="e#381#382#0" expanded="true" />
-            <element signature="e#412#413#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/MainViewFX.fxml">
-      <provider editor-type-id="JavaFX-Scene-Builder">
-        <state />
-      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="210">
           <caret line="10" column="0" lean-forward="false" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
           <folding />
         </state>
+      </provider>
+      <provider editor-type-id="JavaFX-Scene-Builder">
+        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/pom.xml">
@@ -935,8 +920,20 @@
         <state relative-caret-position="204">
           <caret line="12" column="5" lean-forward="false" selection-start-line="12" selection-start-column="5" selection-end-line="12" selection-end-column="5" />
           <folding>
-            <element signature="e#172#173#0" expanded="true" />
-            <element signature="e#203#204#0" expanded="true" />
+            <element signature="e#239#240#0" expanded="false" />
+            <element signature="e#271#272#0" expanded="false" />
+            <element signature="e#509#510#0" expanded="false" />
+            <element signature="e#537#538#0" expanded="false" />
+            <element signature="e#579#580#0" expanded="false" />
+            <element signature="e#613#614#0" expanded="false" />
+            <element signature="e#646#647#0" expanded="false" />
+            <element signature="e#675#676#0" expanded="false" />
+            <element signature="e#719#720#0" expanded="false" />
+            <element signature="e#755#756#0" expanded="false" />
+            <element signature="e#803#804#0" expanded="false" />
+            <element signature="e#843#844#0" expanded="false" />
+            <element signature="e#893#894#0" expanded="false" />
+            <element signature="e#935#936#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -946,14 +943,8 @@
         <state relative-caret-position="306">
           <caret line="27" column="0" lean-forward="false" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
           <folding>
-            <element signature="e#208#209#0" expanded="true" />
-            <element signature="e#268#269#0" expanded="true" />
-            <element signature="e#313#314#0" expanded="true" />
-            <element signature="e#347#348#0" expanded="true" />
-            <element signature="e#398#399#0" expanded="true" />
-            <element signature="e#431#432#0" expanded="true" />
-            <element signature="e#497#498#0" expanded="true" />
-            <element signature="e#541#542#0" expanded="true" />
+            <element signature="e#703#704#0" expanded="true" />
+            <element signature="e#747#748#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -964,9 +955,6 @@
           <caret line="8" column="0" lean-forward="false" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
           <folding>
             <element signature="n#!!doc" expanded="true" />
-            <element signature="imports" expanded="true" />
-            <element signature="e#1523#1524#0" expanded="true" />
-            <element signature="e#1556#1557#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -977,25 +965,19 @@
           <caret line="5" column="27" lean-forward="false" selection-start-line="5" selection-start-column="27" selection-end-line="5" selection-end-column="27" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#206#207#0" expanded="true" />
-            <element signature="e#247#248#0" expanded="true" />
-            <element signature="e#301#302#0" expanded="true" />
-            <element signature="e#344#345#0" expanded="true" />
-            <element signature="e#381#382#0" expanded="true" />
-            <element signature="e#412#413#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/MainViewFX.fxml">
-      <provider editor-type-id="JavaFX-Scene-Builder">
-        <state />
-      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="391">
           <caret line="23" column="0" lean-forward="false" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
           <folding />
         </state>
+      </provider>
+      <provider editor-type-id="JavaFX-Scene-Builder">
+        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/pom.xml">
@@ -1011,8 +993,20 @@
         <state relative-caret-position="204">
           <caret line="12" column="5" lean-forward="false" selection-start-line="12" selection-start-column="5" selection-end-line="12" selection-end-column="5" />
           <folding>
-            <element signature="e#172#173#0" expanded="true" />
-            <element signature="e#203#204#0" expanded="true" />
+            <element signature="e#239#240#0" expanded="false" />
+            <element signature="e#271#272#0" expanded="false" />
+            <element signature="e#509#510#0" expanded="false" />
+            <element signature="e#537#538#0" expanded="false" />
+            <element signature="e#579#580#0" expanded="false" />
+            <element signature="e#613#614#0" expanded="false" />
+            <element signature="e#646#647#0" expanded="false" />
+            <element signature="e#675#676#0" expanded="false" />
+            <element signature="e#719#720#0" expanded="false" />
+            <element signature="e#755#756#0" expanded="false" />
+            <element signature="e#803#804#0" expanded="false" />
+            <element signature="e#843#844#0" expanded="false" />
+            <element signature="e#893#894#0" expanded="false" />
+            <element signature="e#935#936#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1022,14 +1016,8 @@
         <state relative-caret-position="459">
           <caret line="27" column="0" lean-forward="false" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
           <folding>
-            <element signature="e#208#209#0" expanded="true" />
-            <element signature="e#268#269#0" expanded="true" />
-            <element signature="e#313#314#0" expanded="true" />
-            <element signature="e#347#348#0" expanded="true" />
-            <element signature="e#398#399#0" expanded="true" />
-            <element signature="e#431#432#0" expanded="true" />
-            <element signature="e#497#498#0" expanded="true" />
-            <element signature="e#541#542#0" expanded="true" />
+            <element signature="e#703#704#0" expanded="true" />
+            <element signature="e#747#748#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1040,9 +1028,6 @@
           <caret line="8" column="0" lean-forward="false" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
           <folding>
             <element signature="n#!!doc" expanded="true" />
-            <element signature="imports" expanded="true" />
-            <element signature="e#1523#1524#0" expanded="true" />
-            <element signature="e#1556#1557#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1053,25 +1038,19 @@
           <caret line="5" column="27" lean-forward="false" selection-start-line="5" selection-start-column="27" selection-end-line="5" selection-end-column="27" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#206#207#0" expanded="true" />
-            <element signature="e#247#248#0" expanded="true" />
-            <element signature="e#301#302#0" expanded="true" />
-            <element signature="e#344#345#0" expanded="true" />
-            <element signature="e#381#382#0" expanded="true" />
-            <element signature="e#412#413#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/MainViewFX.fxml">
-      <provider editor-type-id="JavaFX-Scene-Builder">
-        <state />
-      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="391">
           <caret line="23" column="0" lean-forward="true" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
           <folding />
         </state>
+      </provider>
+      <provider editor-type-id="JavaFX-Scene-Builder">
+        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/pom.xml">
@@ -1087,8 +1066,20 @@
         <state relative-caret-position="204">
           <caret line="12" column="5" lean-forward="false" selection-start-line="12" selection-start-column="5" selection-end-line="12" selection-end-column="5" />
           <folding>
-            <element signature="e#172#173#0" expanded="true" />
-            <element signature="e#203#204#0" expanded="true" />
+            <element signature="e#239#240#0" expanded="false" />
+            <element signature="e#271#272#0" expanded="false" />
+            <element signature="e#509#510#0" expanded="false" />
+            <element signature="e#537#538#0" expanded="false" />
+            <element signature="e#579#580#0" expanded="false" />
+            <element signature="e#613#614#0" expanded="false" />
+            <element signature="e#646#647#0" expanded="false" />
+            <element signature="e#675#676#0" expanded="false" />
+            <element signature="e#719#720#0" expanded="false" />
+            <element signature="e#755#756#0" expanded="false" />
+            <element signature="e#803#804#0" expanded="false" />
+            <element signature="e#843#844#0" expanded="false" />
+            <element signature="e#893#894#0" expanded="false" />
+            <element signature="e#935#936#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1098,14 +1089,8 @@
         <state relative-caret-position="306">
           <caret line="27" column="0" lean-forward="true" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
           <folding>
-            <element signature="e#208#209#0" expanded="true" />
-            <element signature="e#268#269#0" expanded="true" />
-            <element signature="e#313#314#0" expanded="true" />
-            <element signature="e#347#348#0" expanded="true" />
-            <element signature="e#398#399#0" expanded="true" />
-            <element signature="e#431#432#0" expanded="true" />
-            <element signature="e#497#498#0" expanded="true" />
-            <element signature="e#541#542#0" expanded="true" />
+            <element signature="e#703#704#0" expanded="true" />
+            <element signature="e#747#748#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1116,9 +1101,6 @@
           <caret line="16" column="5" lean-forward="true" selection-start-line="16" selection-start-column="5" selection-end-line="16" selection-end-column="5" />
           <folding>
             <element signature="n#!!doc" expanded="true" />
-            <element signature="imports" expanded="true" />
-            <element signature="e#1523#1524#0" expanded="true" />
-            <element signature="e#1556#1557#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1129,25 +1111,19 @@
           <caret line="5" column="27" lean-forward="false" selection-start-line="5" selection-start-column="27" selection-end-line="5" selection-end-column="27" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#206#207#0" expanded="true" />
-            <element signature="e#247#248#0" expanded="true" />
-            <element signature="e#301#302#0" expanded="true" />
-            <element signature="e#344#345#0" expanded="true" />
-            <element signature="e#381#382#0" expanded="true" />
-            <element signature="e#412#413#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/MainViewFX.fxml">
-      <provider editor-type-id="JavaFX-Scene-Builder">
-        <state />
-      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="374">
           <caret line="22" column="0" lean-forward="false" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
           <folding />
         </state>
+      </provider>
+      <provider editor-type-id="JavaFX-Scene-Builder">
+        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/pom.xml">
@@ -1163,8 +1139,20 @@
         <state relative-caret-position="204">
           <caret line="12" column="5" lean-forward="false" selection-start-line="12" selection-start-column="5" selection-end-line="12" selection-end-column="5" />
           <folding>
-            <element signature="e#172#173#0" expanded="true" />
-            <element signature="e#203#204#0" expanded="true" />
+            <element signature="e#239#240#0" expanded="false" />
+            <element signature="e#271#272#0" expanded="false" />
+            <element signature="e#509#510#0" expanded="false" />
+            <element signature="e#537#538#0" expanded="false" />
+            <element signature="e#579#580#0" expanded="false" />
+            <element signature="e#613#614#0" expanded="false" />
+            <element signature="e#646#647#0" expanded="false" />
+            <element signature="e#675#676#0" expanded="false" />
+            <element signature="e#719#720#0" expanded="false" />
+            <element signature="e#755#756#0" expanded="false" />
+            <element signature="e#803#804#0" expanded="false" />
+            <element signature="e#843#844#0" expanded="false" />
+            <element signature="e#893#894#0" expanded="false" />
+            <element signature="e#935#936#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1175,9 +1163,6 @@
           <caret line="18" column="0" lean-forward="false" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
           <folding>
             <element signature="n#!!doc" expanded="true" />
-            <element signature="imports" expanded="true" />
-            <element signature="e#1523#1524#0" expanded="true" />
-            <element signature="e#1556#1557#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1188,14 +1173,8 @@
         <state relative-caret-position="34">
           <caret line="2" column="27" lean-forward="true" selection-start-line="2" selection-start-column="27" selection-end-line="2" selection-end-column="27" />
           <folding>
-            <element signature="e#208#209#0" expanded="true" />
-            <element signature="e#268#269#0" expanded="true" />
-            <element signature="e#313#314#0" expanded="true" />
-            <element signature="e#347#348#0" expanded="true" />
-            <element signature="e#398#399#0" expanded="true" />
-            <element signature="e#431#432#0" expanded="true" />
-            <element signature="e#497#498#0" expanded="true" />
-            <element signature="e#541#542#0" expanded="true" />
+            <element signature="e#703#704#0" expanded="true" />
+            <element signature="e#747#748#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1213,8 +1192,20 @@
         <state relative-caret-position="204">
           <caret line="12" column="5" lean-forward="true" selection-start-line="12" selection-start-column="5" selection-end-line="12" selection-end-column="5" />
           <folding>
-            <element signature="e#172#173#0" expanded="true" />
-            <element signature="e#203#204#0" expanded="true" />
+            <element signature="e#239#240#0" expanded="false" />
+            <element signature="e#271#272#0" expanded="false" />
+            <element signature="e#509#510#0" expanded="false" />
+            <element signature="e#537#538#0" expanded="false" />
+            <element signature="e#579#580#0" expanded="false" />
+            <element signature="e#613#614#0" expanded="false" />
+            <element signature="e#646#647#0" expanded="false" />
+            <element signature="e#675#676#0" expanded="false" />
+            <element signature="e#719#720#0" expanded="false" />
+            <element signature="e#755#756#0" expanded="false" />
+            <element signature="e#803#804#0" expanded="false" />
+            <element signature="e#843#844#0" expanded="false" />
+            <element signature="e#893#894#0" expanded="false" />
+            <element signature="e#935#936#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1224,14 +1215,8 @@
         <state relative-caret-position="289">
           <caret line="26" column="1" lean-forward="true" selection-start-line="26" selection-start-column="1" selection-end-line="26" selection-end-column="1" />
           <folding>
-            <element signature="e#208#209#0" expanded="true" />
-            <element signature="e#268#269#0" expanded="true" />
-            <element signature="e#313#314#0" expanded="true" />
-            <element signature="e#347#348#0" expanded="true" />
-            <element signature="e#398#399#0" expanded="true" />
-            <element signature="e#431#432#0" expanded="true" />
-            <element signature="e#497#498#0" expanded="true" />
-            <element signature="e#541#542#0" expanded="true" />
+            <element signature="e#703#704#0" expanded="true" />
+            <element signature="e#747#748#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1243,9 +1228,6 @@
           <caret line="18" column="0" lean-forward="true" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
           <folding>
             <element signature="n#!!doc" expanded="true" />
-            <element signature="imports" expanded="true" />
-            <element signature="e#1523#1524#0" expanded="true" />
-            <element signature="e#1556#1557#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1272,42 +1254,94 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/view/AddEventView.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/MainApp2.java" />
     <entry file="file://$PROJECT_DIR$/src/main/resources/AddEventViewFX.fxml">
-      <provider editor-type-id="JavaFX-Scene-Builder">
-        <state />
-      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="525">
           <caret line="25" column="14" lean-forward="false" selection-start-line="25" selection-start-column="14" selection-end-line="25" selection-end-column="14" />
           <folding />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/MainViewFX.fxml">
       <provider editor-type-id="JavaFX-Scene-Builder">
         <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="441">
-          <caret line="21" column="38" lean-forward="false" selection-start-line="21" selection-start-column="38" selection-end-line="21" selection-end-column="38" />
-          <folding />
-        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/model/Event.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="500">
+        <state relative-caret-position="378">
           <caret line="22" column="0" lean-forward="false" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
           <folding>
-            <element signature="e#172#173#0" expanded="true" />
-            <element signature="e#203#204#0" expanded="true" />
+            <element signature="e#239#240#0" expanded="false" />
+            <element signature="e#271#272#0" expanded="false" />
+            <element signature="e#509#510#0" expanded="false" />
+            <element signature="e#537#538#0" expanded="false" />
+            <element signature="e#579#580#0" expanded="false" />
+            <element signature="e#613#614#0" expanded="false" />
+            <element signature="e#646#647#0" expanded="false" />
+            <element signature="e#675#676#0" expanded="false" />
+            <element signature="e#719#720#0" expanded="false" />
+            <element signature="e#755#756#0" expanded="false" />
+            <element signature="e#803#804#0" expanded="false" />
+            <element signature="e#843#844#0" expanded="false" />
+            <element signature="e#893#894#0" expanded="false" />
+            <element signature="e#935#936#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_111/javafx-src.zip!/javafx/fxml/FXMLLoader.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="380">
+          <caret line="2596" column="0" lean-forward="false" selection-start-line="2596" selection-start-column="0" selection-end-line="2596" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/MainViewFX.fxml">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="21" column="38" lean-forward="false" selection-start-line="21" selection-start-column="38" selection-end-line="21" selection-end-column="38" />
+          <folding />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="JavaFX-Scene-Builder">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/MainApp.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-357">
+          <caret line="13" column="0" lean-forward="true" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/view/MainViewController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-370">
+          <caret line="40" column="29" lean-forward="true" selection-start-line="40" selection-start-column="29" selection-end-line="40" selection-end-column="29" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1912#1913#0" expanded="true" />
+            <element signature="e#1956#1957#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/controller/MainController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="621">
+          <caret line="24" column="5" lean-forward="false" selection-start-line="24" selection-start-column="5" selection-end-line="24" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/model/DateTable.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="432">
-          <caret line="20" column="0" lean-forward="false" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
+        <state relative-caret-position="376">
+          <caret line="15" column="5" lean-forward="false" selection-start-line="15" selection-start-column="5" selection-end-line="15" selection-end-column="5" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1316,66 +1350,23 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/model/Schedule.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="600">
-          <caret line="25" column="8" lean-forward="false" selection-start-line="25" selection-start-column="8" selection-end-line="25" selection-end-column="8" />
+        <state relative-caret-position="630">
+          <caret line="28" column="20" lean-forward="false" selection-start-line="28" selection-start-column="20" selection-end-line="28" selection-end-column="20" />
           <folding>
-            <element signature="e#208#209#0" expanded="true" />
-            <element signature="e#268#269#0" expanded="true" />
-            <element signature="e#313#314#0" expanded="true" />
-            <element signature="e#347#348#0" expanded="true" />
-            <element signature="e#398#399#0" expanded="true" />
-            <element signature="e#431#432#0" expanded="true" />
-            <element signature="e#497#498#0" expanded="true" />
-            <element signature="e#541#542#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/controller/MainController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="483">
-          <caret line="23" column="0" lean-forward="true" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#206#207#0" expanded="true" />
-            <element signature="e#247#248#0" expanded="true" />
-            <element signature="e#301#302#0" expanded="true" />
-            <element signature="e#344#345#0" expanded="true" />
-            <element signature="e#381#382#0" expanded="true" />
-            <element signature="e#412#413#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/view/MainViewController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="246">
-          <caret line="45" column="62" lean-forward="false" selection-start-line="45" selection-start-column="62" selection-end-line="45" selection-end-column="62" />
-          <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="e#703#704#0" expanded="true" />
+            <element signature="e#747#748#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/view/AddEventViewController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="18">
-          <caret line="31" column="38" lean-forward="false" selection-start-line="31" selection-start-column="38" selection-end-line="31" selection-end-column="38" />
+        <state relative-caret-position="450">
+          <caret line="52" column="11" lean-forward="true" selection-start-line="50" selection-start-column="10" selection-end-line="52" selection-end-column="11" />
           <folding>
             <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/MainApp.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="432">
-          <caret line="18" column="40" lean-forward="false" selection-start-line="18" selection-start-column="40" selection-end-line="18" selection-end-column="40" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-            <element signature="imports" expanded="true" />
-            <element signature="e#1523#1524#0" expanded="true" />
-            <element signature="e#1556#1557#0" expanded="true" />
+            <element signature="e#1322#1323#0" expanded="true" />
+            <element signature="e#1366#1367#0" expanded="true" />
           </folding>
         </state>
       </provider>

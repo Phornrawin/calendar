@@ -7,7 +7,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="664.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.MainViewController">
+<AnchorPane prefHeight="664.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.112" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.MainViewController">
    <children>
       <Label layoutX="141.0" layoutY="14.0" text="Appointment Schedule">
          <font>
@@ -31,6 +31,6 @@
             <Font name="System Bold" size="18.0" />
          </font>
       </Label>
-      <Button fx:id="btnAddEvent" layoutX="256.0" layoutY="612.0" mnemonicParsing="false" onAction="#on" text="Add Event" />
+      <Button fx:id="btnAddEvent" layoutX="256.0" layoutY="612.0" mnemonicParsing="false" onAction="#onClickNewEvent" text="Add Event" />
    </children>
 </AnchorPane>

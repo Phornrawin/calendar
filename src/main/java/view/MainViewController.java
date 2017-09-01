@@ -1,5 +1,6 @@
 package view;
 
+import controller.MainController;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
@@ -8,6 +9,7 @@ import javafx.scene.control.DatePicker;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextArea;
 import javafx.scene.layout.AnchorPane;
+import javafx.scene.layout.Pane;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
 
@@ -29,6 +31,8 @@ public class MainViewController{
     @FXML
     private Button btnAddEvent;
 
+    private MainController controller;
+
     public MainViewController() {
 
     }
@@ -46,10 +50,12 @@ public class MainViewController{
             System.out.println("In onClickNewEvent in MainView");
             // Load root layout from fxml file.
             Stage secondStage = new Stage();
-            AnchorPane mainLayout;
             FXMLLoader loader = new FXMLLoader();
             loader.setLocation(MainViewController.class.getResource("/AddEventViewFX.fxml"));
-            mainLayout = (AnchorPane) loader.load();
+            Pane mainLayout = (AnchorPane) loader.load();
+            AddEventViewController addEventView = loader.getController();
+            addEventView.setController(controller);
+
 
             // Show the scene containing the root layout.
             Scene scene = new Scene(mainLayout);
@@ -63,5 +69,9 @@ public class MainViewController{
         } catch (IOException e) {
             e.printStackTrace();
         }
+    }
+
+    public void setController(MainController controller){
+        this.controller = controller;
     }
 }

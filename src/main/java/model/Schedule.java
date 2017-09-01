@@ -11,14 +11,26 @@ public class Schedule {
 
 
     public Schedule() {
+
         this.dateTables = new ArrayList<DateTable>();
     }
 
     public void addDateTable(DateTable dt){
+
         dateTables.add(dt);
     }
 
+    public boolean checkDate(Date date){
+        for(DateTable dateT : dateTables){
+            if (dateT.equals(date)){
+                return true;
+            }
+        }
+        return false;
+    }
+
     public ArrayList<DateTable> getDateTables() {
+
         return dateTables;
     }
 
