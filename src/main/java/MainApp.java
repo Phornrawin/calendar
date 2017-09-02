@@ -10,7 +10,6 @@ import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
 import view.MainViewController;
-import javafx.event.ActionEvent;
 
 import java.io.IOException;
 
