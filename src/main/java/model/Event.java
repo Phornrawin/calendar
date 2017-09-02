@@ -1,24 +1,20 @@
 package model;
 
+import java.util.Date;
+
 /**
  * Created by Phornrawin on 27/8/2560.
  */
 public class Event {
-    private String topic, detail, startHrs, startMins;
+    private String topic, detail;
+    private Date date;
 
-    public String getStartHrs() {
-        return startHrs;
-    }
 
-    public String getStartMins() {
-        return startMins;
-    }
 
-    public Event(String topic, String detail, String startHrs, String startMins) {
-        setTopic(topic);
-        setDetail(detail);
-        setStartHrs(startHrs);
-        setStartMins(startMins);
+    public Event(String topic, String detail,Date date) {
+        this.topic = topic;
+        this.detail = detail;
+        this.date = date;
     }
 
     public String getTopic() {
@@ -37,11 +33,13 @@ public class Event {
         this.detail = detail;
     }
 
-    public void setStartHrs(String startHrs) {
-        this.startHrs = startHrs;
+    public Date getDate() {
+        return date;
     }
 
-    public void setStartMins(String startMins) {
-        this.startMins = startMins;
+    public void setDate(Date date) {
+        this.date = date;
     }
+
+
 }

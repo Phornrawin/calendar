@@ -3,11 +3,9 @@ package view;
 import controller.MainController;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
-import jdk.nashorn.internal.ir.CallNode;
-import model.DateTable;
 import model.Event;
 
-import java.time.ZoneId;
+//import java.time.ZoneId;
 import java.util.Date;
 
 /**
@@ -41,13 +39,13 @@ public class AddEventViewController {
 
     @FXML
     public void onClickAddEvent(){
-        Date date = Date.from(datePickerSelect.getValue().atStartOfDay(ZoneId.systemDefault()).toInstant());
+//        Date date = Date.from(datePickerSelect.getValue().atStartOfDay(ZoneId.systemDefault()).toInstant());
         String startHrs = spinnerHour.getValue().toString();
         String startmins = spinnerMins.getValue().toString();
         String topic = textfieldTopic.getText().toString();
         String detail = textAreaDetail.getText().toString();
 
-        Event event = new Event(topic, detail, startHrs, startmins);
+//        Event event = new Event(topic, detail, startHrs, startmins);
 //        if (controller.getSchedule().checkDate(date)){
 //
 //        }

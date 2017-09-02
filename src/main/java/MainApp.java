@@ -30,6 +30,7 @@ public class MainApp extends Application {
         this.primaryStage = primaryStage;
         this.primaryStage.setTitle("Appointment Schedule");
         this.controller = new MainController();
+        this.controller.startControll();
         initMainLayout();
     }
 

@@ -1,6 +1,6 @@
 package controller;
 
-import model.DateTable;
+import model.Event;
 import model.Schedule;
 
 /**
@@ -8,15 +8,14 @@ import model.Schedule;
  */
 public class MainController {
     private Schedule schedule;
+    private DatabaseController dbController;
 
-    public MainController() {
-
-        schedule = new Schedule();
+    public void startControll(){
+        this.dbController = DatabaseController.getInstance();
+        this.schedule = dbController.loadDatafromDB();
     }
-
-    public void addEventToDateTable(DateTable date){
-
-        schedule.addDateTable(date);
+    public void addEventToSchedule(Event event){
+        schedule.addEvent(event);
     }
 
     public Schedule getSchedule() {

@@ -7,34 +7,22 @@ import java.util.Date;
  * Created by Phornrawin on 27/8/2560.
  */
 public class Schedule {
-    private ArrayList<DateTable> dateTables;
-
+    private ArrayList<Event> events;
 
     public Schedule() {
 
-        this.dateTables = new ArrayList<DateTable>();
+        this.events = new ArrayList();
     }
 
-    public void addDateTable(DateTable dt){
-
-        dateTables.add(dt);
+    public void addEvent(Event event){
+        this.events.add(event);
     }
 
-    public boolean checkDate(Date date){
-        for(DateTable dateT : dateTables){
-            if (dateT.equals(date)){
-                return true;
-            }
-        }
-        return false;
+    public ArrayList<Event> getEvents() {
+        return events;
     }
 
-    public ArrayList<DateTable> getDateTables() {
-
-        return dateTables;
-    }
-
-    public void setDateTables(ArrayList<DateTable> dateTables) {
-        this.dateTables = dateTables;
+    public void setEvents(ArrayList<Event> events) {
+        this.events = events;
     }
 }
