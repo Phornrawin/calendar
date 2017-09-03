@@ -59,6 +59,7 @@ public class MainViewController{
             Pane mainLayout = (AnchorPane) loader.load();
             AddEventViewController addEventView = loader.getController();
             addEventView.setController(controller);
+            addEventView.setMainView(this);
 
 
             // Show the scene containing the root layout.
@@ -76,8 +77,11 @@ public class MainViewController{
 
     public void setController(MainController controller){
         this.controller = controller;
-        this.data = FXCollections.observableList(controller.getSchedule().getEvents());
         initTextArea();
 
+    }
+
+    public TextArea getShowEventTextArea(){
+        return showEventTextArea;
     }
 }

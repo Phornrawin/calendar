@@ -22,7 +22,7 @@ public class AddEventViewController {
     @FXML private TextArea textAreaDetail;
     @FXML private Button btnAddEvent;
     private MainController controller;
-    private SimpleDateFormat format = new SimpleDateFormat("E, dd MMM yyyy HH:mm z");
+    private  MainViewController mainView;
 
 
     @FXML
@@ -44,6 +44,7 @@ public class AddEventViewController {
         Event event = new Event(topic, detail, startTime);
         controller.addEventToSchedule(event);
         System.out.println("Add event to DB:\n" + event.toString());
+        mainView.initTextArea();
 
         Stage stage = (Stage) textfieldTopic.getScene().getWindow();
         stage.close();
@@ -57,4 +58,9 @@ public class AddEventViewController {
         datePickerSelect.setValue(LocalDate.now());
 
     }
+
+    public void setMainView(MainViewController mainView){
+        this.mainView = mainView;
+    }
+
 }

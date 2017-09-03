@@ -17,7 +17,7 @@ public class DatabaseController {
     private SimpleDateFormat dateFormat;
 
     public DatabaseController() {
-        dateFormat = new SimpleDateFormat("E, dd MMM yyyy HH:mm", Locale.ENGLISH);
+        dateFormat = new SimpleDateFormat("E dd MMM yyyy HH:mm", Locale.ENGLISH);
     }
 
     public static DatabaseController getInstance(){
@@ -77,9 +77,10 @@ public class DatabaseController {
                 String topic = event.getTopic();
                 String detail = event.getDetail();
 
-                String query = String.format("Insert into event values (\'%s\', \'%s\', \'%s\')", date, topic, detail);
+                String query = String.format("insert into event values (\'%s\', \'%s\', \'%s\')", date, topic, detail);
+                System.out.println(query);
                 Statement statement = conn.createStatement();
-                statement.executeQuery(query);
+                statement.executeUpdate(query);
 
                 conn.close();
 
