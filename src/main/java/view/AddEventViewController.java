@@ -5,32 +5,24 @@ import javafx.fxml.FXML;
 import javafx.scene.control.*;
 import model.Event;
 
-//import java.time.ZoneId;
+import java.text.SimpleDateFormat;
+import java.time.Instant;
+import java.time.LocalDate;
+import java.time.ZoneId;
 import java.util.Date;
 
 /**
  * Created by Phornrawin on 30/8/2560.
  */
 public class AddEventViewController {
-    @FXML
-    private DatePicker datePickerSelect;
-
-    @FXML
-    private Spinner<Integer> spinnerHour, spinnerMins;
-
-    @FXML
-    private TextField textfieldTopic;
-
-    @FXML
-    private TextArea textAreaDetail;
-
-    @FXML
-    private Button btnAddEvent;
-
+    @FXML private DatePicker datePickerSelect;
+    @FXML private Spinner<Integer> spinnerHour, spinnerMins;
+    @FXML private TextField textfieldTopic;
+    @FXML private TextArea textAreaDetail;
+    @FXML private Button btnAddEvent;
     private MainController controller;
+    private SimpleDateFormat format = new SimpleDateFormat("E, dd MMM yyyy HH:mm z");
 
-    public AddEventViewController() {
-    }
 
     @FXML
     public void initialize(){
@@ -39,16 +31,18 @@ public class AddEventViewController {
 
     @FXML
     public void onClickAddEvent(){
-//        Date date = Date.from(datePickerSelect.getValue().atStartOfDay(ZoneId.systemDefault()).toInstant());
-        String startHrs = spinnerHour.getValue().toString();
-        String startmins = spinnerMins.getValue().toString();
-        String topic = textfieldTopic.getText().toString();
-        String detail = textAreaDetail.getText().toString();
+        LocalDate localDate = datePickerSelect.getValue();
+        Instant instant = Instant.from(localDate.atStartOfDay(ZoneId.systemDefault()));
+        Date startTime = Date.from(instant);
+        startTime.setHours(spinnerHour.getValue());
+        startTime.setMinutes(spinnerMins.getValue());
+        String topic = textfieldTopic.getText();
+        String detail = textAreaDetail.getText();
+//        String dateformat = format.format(date);
 
-//        Event event = new Event(topic, detail, startHrs, startmins);
-//        if (controller.getSchedule().checkDate(date)){
-//
-//        }
+        Event event = new Event(topic, detail, startTime);
+        controller.addEventToSchedule(event);
+        System.out.println("Add event to DB:" + event.toString());
 
 
 
@@ -56,5 +50,6 @@ public class AddEventViewController {
 
     public void setController(MainController controller){
         this.controller = controller;
+
     }
 }

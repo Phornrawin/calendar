@@ -23,16 +23,15 @@ import java.io.IOException;
  * Created by Phornrawin on 30/8/2560.
  */
 public class MainViewController{
-    @FXML private DatePicker selectDateSpiner;
-    @FXML private Label selectDayTextView;
     @FXML private TextArea showEventTextArea;
     @FXML private Button btnAddEvent;
+    @FXML private Button btnEditAndDelete;
     private MainController controller;
     private ObservableList<Event> data;
 
     @FXML
     public void initialize(){
-        initTextArea();
+
     }
 
     public void initTextArea(){
@@ -77,6 +76,7 @@ public class MainViewController{
     public void setController(MainController controller){
         this.controller = controller;
         this.data = FXCollections.observableList(controller.getSchedule().getEvents());
+        initTextArea();
 
     }
 }

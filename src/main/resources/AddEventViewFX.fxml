@@ -47,6 +47,6 @@
       <TextField fx:id="topicTextfield" layoutX="36.0" layoutY="184.0" prefHeight="31.0" prefWidth="440.0" />
       <Label layoutX="36.0" layoutY="251.0" text="Enter Detail" />
       <TextArea fx:id="DetailTextArea" layoutX="36.0" layoutY="272.0" prefHeight="200.0" prefWidth="440.0" />
-      <Button fx:id="btnAddEvent" layoutX="229.0" layoutY="498.0" mnemonicParsing="false" text="Add" />
+      <Button fx:id="btnAddEvent" layoutX="229.0" layoutY="498.0" mnemonicParsing="false" onAction="#onClickAddEvent"  text="Add" />
    </children>
 </AnchorPane>

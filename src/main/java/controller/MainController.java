@@ -16,6 +16,7 @@ public class MainController {
     }
     public void addEventToSchedule(Event event){
         schedule.addEvent(event);
+        dbController.addDatatoDB(event);
     }
 
     public Schedule getSchedule() {
