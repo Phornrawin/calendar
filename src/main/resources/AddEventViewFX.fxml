@@ -29,24 +29,24 @@
             <Font size="18.0" />
          </font>
       </Label>
-      <DatePicker fx:id="selectDay_Picker" layoutX="144.0" layoutY="59.0" />
+      <DatePicker fx:id="datePickerSelect" layoutX="144.0" layoutY="59.0" />
       <Label layoutX="36.0" layoutY="110.0" text="select start time:">
          <font>
             <Font size="18.0" />
          </font>
       </Label>
-      <Spinner fx:id="hourSpinner" layoutX="188.0" layoutY="108.0" prefHeight="31.0" prefWidth="74.0" min="$minH" max="$maxH" />
+      <Spinner fx:id="spinnerHour" layoutX="188.0" layoutY="108.0" prefHeight="31.0" prefWidth="74.0" min="$minH" max="$maxH" />
       <Label layoutX="274.0" layoutY="110.0" text=":">
          <font>
             <Font size="18.0" />
          </font>
       </Label>
-      <Spinner fx:id="minSpiner" layoutX="288.0" layoutY="108.0" prefHeight="31.0" prefWidth="74.0" min="$minM" max="$maxM" />
+      <Spinner fx:id="spinnerMins" layoutX="288.0" layoutY="108.0" prefHeight="31.0" prefWidth="74.0" min="$minM" max="$maxM" />
       <Label layoutX="382.0" layoutY="113.0" text="24 hrs." textFill="#868282" />
       <Label layoutX="36.0" layoutY="163.0" text="Enter Topic" />
-      <TextField fx:id="topicTextfield" layoutX="36.0" layoutY="184.0" prefHeight="31.0" prefWidth="440.0" />
+      <TextField fx:id="textfieldTopic" layoutX="36.0" layoutY="184.0" prefHeight="31.0" prefWidth="440.0" />
       <Label layoutX="36.0" layoutY="251.0" text="Enter Detail" />
-      <TextArea fx:id="DetailTextArea" layoutX="36.0" layoutY="272.0" prefHeight="200.0" prefWidth="440.0" />
+      <TextArea fx:id="textAreaDetail" layoutX="36.0" layoutY="272.0" prefHeight="200.0" prefWidth="440.0" />
       <Button fx:id="btnAddEvent" layoutX="229.0" layoutY="498.0" mnemonicParsing="false" onAction="#onClickAddEvent"  text="Add" />
    </children>
 </AnchorPane>

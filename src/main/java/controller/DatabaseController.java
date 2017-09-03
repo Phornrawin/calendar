@@ -77,7 +77,7 @@ public class DatabaseController {
                 String topic = event.getTopic();
                 String detail = event.getDetail();
 
-                String query = String.format("insert into event values (\'%s\', \'%s\', \'%s\'", date, topic, detail);
+                String query = String.format("Insert into event values (\'%s\', \'%s\', \'%s\')", date, topic, detail);
                 Statement statement = conn.createStatement();
                 statement.executeQuery(query);
 

@@ -42,6 +42,7 @@ public class MainViewController{
             s += "=====================\n";
         }
         showEventTextArea.setText(s);
+        showEventTextArea.setEditable(false);
 
     }
 

@@ -3,6 +3,7 @@ package view;
 import controller.MainController;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
+import javafx.stage.Stage;
 import model.Event;
 
 import java.text.SimpleDateFormat;
@@ -42,7 +43,10 @@ public class AddEventViewController {
 
         Event event = new Event(topic, detail, startTime);
         controller.addEventToSchedule(event);
-        System.out.println("Add event to DB:" + event.toString());
+        System.out.println("Add event to DB:\n" + event.toString());
+
+        Stage stage = (Stage) textfieldTopic.getScene().getWindow();
+        stage.close();
 
 
 
@@ -50,6 +54,7 @@ public class AddEventViewController {
 
     public void setController(MainController controller){
         this.controller = controller;
+        datePickerSelect.setValue(LocalDate.now());
 
     }
 }
