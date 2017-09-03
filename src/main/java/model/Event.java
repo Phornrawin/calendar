@@ -1,5 +1,6 @@
 package model;
 
+import java.text.SimpleDateFormat;
 import java.util.Date;
 
 /**
@@ -8,6 +9,7 @@ import java.util.Date;
 public class Event {
     private String topic, detail;
     private Date date;
+    private SimpleDateFormat format;
 
 
 
@@ -15,6 +17,8 @@ public class Event {
         this.topic = topic;
         this.detail = detail;
         this.date = date;
+        this.format = new SimpleDateFormat("E, dd MMM yyyy HH:mm z");
+
     }
 
     public String getTopic() {
@@ -39,6 +43,10 @@ public class Event {
 
     public void setDate(Date date) {
         this.date = date;
+    }
+
+    public String toString(){
+        return String.format("Date: %s\n" + "Topic: %s\n" + "Detail: %s\n", format.format(date), topic, detail);
     }
 
 

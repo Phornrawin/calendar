@@ -1,6 +1,8 @@
 package view;
 
 import controller.MainController;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
@@ -12,6 +14,8 @@ import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.Pane;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
+import model.Event;
+import model.Schedule;
 
 import java.io.IOException;
 
@@ -19,26 +23,26 @@ import java.io.IOException;
  * Created by Phornrawin on 30/8/2560.
  */
 public class MainViewController{
-    @FXML
-    private DatePicker selectDateSpiner;
-
-    @FXML
-    private Label selectDayTextView;
-
-    @FXML
-    private TextArea showEventTextArea;
-
-    @FXML
-    private Button btnAddEvent;
-
+    @FXML private DatePicker selectDateSpiner;
+    @FXML private Label selectDayTextView;
+    @FXML private TextArea showEventTextArea;
+    @FXML private Button btnAddEvent;
     private MainController controller;
-
-    public MainViewController() {
-
-    }
+    private ObservableList<Event> data;
 
     @FXML
     public void initialize(){
+        initTextArea();
+    }
+
+    public void initTextArea(){
+        String s = "";
+        Schedule schedule = controller.getSchedule();
+        for(Event e : schedule.getEvents()){
+            s += e.toString();
+            s += "=====================\n";
+        }
+        showEventTextArea.setText(s);
 
     }
 
@@ -60,7 +64,6 @@ public class MainViewController{
             // Show the scene containing the root layout.
             Scene scene = new Scene(mainLayout);
             secondStage.setScene(scene);
-            secondStage.show();
             secondStage.setResizable(false);
             secondStage.setTitle("New Event");
             secondStage.initModality(Modality.APPLICATION_MODAL);
@@ -73,5 +76,7 @@ public class MainViewController{
 
     public void setController(MainController controller){
         this.controller = controller;
+        this.data = FXCollections.observableList(controller.getSchedule().getEvents());
+
     }
 }

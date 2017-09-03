@@ -64,4 +64,36 @@ public class DatabaseController {
         return null;
 
     }
+
+    public boolean addDatatoDB(Event event) {
+        try {
+            Class.forName("org.sqlite.JDBC");
+            String dbURL = "jdbc:sqlite:Schedule.db";
+            Connection conn = DriverManager.getConnection(dbURL);
+
+            if(conn != null){
+                System.out.println("Connected to the database....");
+                String date = dateFormat.format(event.getDate());
+                String topic = event.getTopic();
+                String detail = event.getDetail();
+
+                String query = String.format("insert into event values (\'%s\', \'%s\', \'%s\'", date, topic, detail);
+                Statement statement = conn.createStatement();
+                statement.executeQuery(query);
+
+                conn.close();
+
+                return true;
+
+            }
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return false;
+
+    }
+
+
 }
