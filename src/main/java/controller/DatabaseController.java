@@ -97,5 +97,39 @@ public class DatabaseController {
 
     }
 
+    public boolean updateDatabase(Event oldEvent, Event newEvent){
+        try {
+            Class.forName("org.sqlite.JDBC");
+            String dbURL = "jdbc:sqlite:Schedlue.db";
+            Connection conn = DriverManager.getConnection(dbURL);
+
+            if(conn != null){
+                System.out.println("Connected to the database...");
+                String oldEventDate = dateFormat.format(oldEvent.getDate());
+                String oldEventTopic = oldEvent.getTopic();
+
+                String newEventDate = dateFormat.format(newEvent.getDate());
+                String newEventTopic = newEvent.getTopic();
+                String newEventDetail = newEvent.getDetail();
+
+                String query = String.format("update events set date=\'%s\', topic=\'%s\', detail=\'%s\' where date=\'%s\' and topic=\'%s\'",
+                        newEventDate, newEventTopic, newEventDetail, oldEventDate, oldEventTopic);
+                Statement statement = conn.createStatement();
+                statement.executeUpdate(query);
+
+                conn.close();
+
+                return true;
+            }
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
+        return false;
+
+    }
+
 
 }

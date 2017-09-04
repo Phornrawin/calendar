@@ -25,4 +25,13 @@ public class Schedule {
     public void setEvents(ArrayList<Event> events) {
         this.events = events;
     }
+
+    public void removeEvent(Event event){
+        for (Event e: events) {
+            if(e.getDateToString().equals(event.getDateToString()) && e.getTopic().equals(event.getTopic())){
+                events.remove(e);
+                return;
+            }
+        }
+    }
 }

@@ -39,7 +39,6 @@ public class AddEventViewController {
         startTime.setMinutes(spinnerMins.getValue());
         String topic = textfieldTopic.getText();
         String detail = textAreaDetail.getText();
-//        String dateformat = format.format(date);
 
         Event event = new Event(topic, detail, startTime);
         controller.addEventToSchedule(event);

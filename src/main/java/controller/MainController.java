@@ -19,8 +19,20 @@ public class MainController {
         dbController.addDatatoDB(event);
     }
 
+    public DatabaseController getDbController() {
+        return dbController;
+    }
+
+    public void setDbController(DatabaseController dbController) {
+        this.dbController = dbController;
+    }
+
     public Schedule getSchedule() {
 
         return schedule;
+    }
+
+    public void setSchedule(Schedule schedule) {
+        this.schedule = schedule;
     }
 }
