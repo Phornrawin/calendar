@@ -20,6 +20,6 @@
          </font>
       </Label>
       <Button fx:id="btnAddEvent" layoutX="141.0" layoutY="586.0" mnemonicParsing="false" onAction="#onClickNewEvent" text="Add Event" />
-      <Button fx:id="btnEditAndDelete" layoutX="342.0" layoutY="586.0" mnemonicParsing="false" text="Edit/Delete" />
+      <Button fx:id="btnEditAndDelete" layoutX="342.0" layoutY="586.0" mnemonicParsing="false" onAction="#onClickEditAndDelete" text="Edit/Delete" />
    </children>
 </AnchorPane>

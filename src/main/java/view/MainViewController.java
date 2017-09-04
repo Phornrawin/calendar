@@ -27,7 +27,6 @@ public class MainViewController{
     @FXML private Button btnAddEvent;
     @FXML private Button btnEditAndDelete;
     private MainController controller;
-    private ObservableList<Event> data;
 
     @FXML
     public void initialize(){
@@ -47,11 +46,10 @@ public class MainViewController{
     }
 
 
-
     @FXML
     public void onClickNewEvent(){
         try {
-            System.out.println("In onClickNewEvent in MainView");
+            System.out.println("In onClickNewEvent method in MainView");
             // Load root layout from fxml file.
             Stage secondStage = new Stage();
             FXMLLoader loader = new FXMLLoader();
@@ -60,7 +58,6 @@ public class MainViewController{
             AddEventViewController addEventView = loader.getController();
             addEventView.setController(controller);
             addEventView.setMainView(this);
-
 
             // Show the scene containing the root layout.
             Scene scene = new Scene(mainLayout);
@@ -73,6 +70,32 @@ public class MainViewController{
         } catch (IOException e) {
             e.printStackTrace();
         }
+    }
+
+    @FXML
+    public void onClickEditAndDelete(){
+        try {
+            System.out.println("In onClickEditAndDelete method in MainView");
+            Stage editStage = new Stage();
+            FXMLLoader loader = new FXMLLoader();
+            loader.setLocation(MainViewController.class.getResource("/EditAndDeleteViewFX.fxml"));
+            Pane layout = (AnchorPane) loader.load();
+            EditAndDeleteViewController editView = loader.getController();
+            editView.setController(controller);
+            editView.setMainView(this);
+
+            Scene scene = new Scene(layout);
+            editStage.setScene(scene);
+            editStage.setResizable(false);
+            editStage.setTitle("Edit and Delete Event");
+            editStage.initModality(Modality.APPLICATION_MODAL);
+            editStage.showAndWait();
+
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
     }
 
     public void setController(MainController controller){

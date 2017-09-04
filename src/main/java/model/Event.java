@@ -45,6 +45,10 @@ public class Event {
         this.date = date;
     }
 
+    public String getDateToString(){
+        return format.format(date);
+    }
+
     public String toString(){
         return String.format("Date: %s\n" + "Topic: %s\n" + "Detail: %s\n", format.format(date), topic, detail);
     }

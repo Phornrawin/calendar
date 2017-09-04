@@ -10,9 +10,15 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-
-<AnchorPane prefHeight="600.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="EditAndDeleteViewFX">
+<?import java.lang.Integer?>
+<AnchorPane prefHeight="600.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.EditAndDeleteViewController">
    <children>
+      <fx:define>
+         <Integer fx:id="minH" fx:value="0" />
+         <Integer fx:id="maxH" fx:value="23" />
+         <Integer fx:id="minM" fx:value="0" />
+         <Integer fx:id="maxM" fx:value="59" />
+      </fx:define>
       <Label layoutX="110.0" layoutY="53.0" text="Select Event:">
          <font>
             <Font size="20.0" />
@@ -21,11 +27,11 @@
       <DatePicker fx:id="datePickerEdit" layoutX="91.0" layoutY="108.0" prefHeight="31.0" prefWidth="192.0" />
       <Label layoutX="46.0" layoutY="113.0" text="Date:" />
       <Label layoutX="315.0" layoutY="113.0" text="Start time:" />
-      <Spinner fx:id="spinerHr" layoutX="390.0" layoutY="108.0" prefHeight="31.0" prefWidth="78.0" />
+      <Spinner fx:id="spinerHr" layoutX="390.0" layoutY="108.0" max="$maxH" min="$minH" prefHeight="31.0" prefWidth="78.0" />
       <Label layoutX="481.0" layoutY="113.0" prefHeight="21.0" prefWidth="0.0" text=":" />
-      <Spinner fx:id="spinerMins" layoutX="500.0" layoutY="108.0" prefHeight="31.0" prefWidth="78.0" />
+      <Spinner fx:id="spinerMins" layoutX="500.0" layoutY="108.0" max="$maxM" min="$minM" prefHeight="31.0" prefWidth="78.0" />
       <Label layoutX="44.0" layoutY="176.0" text="Topic:" />
-      <TextField fx:id="textViewTopic" layoutX="110.0" layoutY="171.0" prefHeight="31.0" prefWidth="419.0" />
+      <TextField fx:id="textFieldTopic" layoutX="110.0" layoutY="171.0" prefHeight="31.0" prefWidth="419.0" />
       <Label layoutX="47.0" layoutY="237.0" text="Detail:" />
       <TextArea fx:id="textAreaDetail" layoutX="64.0" layoutY="267.0" prefHeight="250.0" prefWidth="469.0" />
       <Button fx:id="btnEdit" layoutX="198.0" layoutY="536.0" mnemonicParsing="false" text="Edit" />

@@ -17,6 +17,7 @@ public class DatabaseController {
     private SimpleDateFormat dateFormat;
 
     public DatabaseController() {
+
         dateFormat = new SimpleDateFormat("E dd MMM yyyy HH:mm", Locale.ENGLISH);
     }
 
