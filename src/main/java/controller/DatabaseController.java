@@ -51,9 +51,10 @@ public class DatabaseController {
                     String s = String.format("Topic: %s\n" + "Detail: %s\n" + "Date&Time: %s",topic,detail,date);
                     System.out.println(s);
                 }
+                conn.close();
                 return schedule;
+
             }
-            conn.close();
 
         } catch (ClassNotFoundException e) {
             e.printStackTrace();
@@ -100,7 +101,7 @@ public class DatabaseController {
     public boolean updateDatabase(Event oldEvent, Event newEvent){
         try {
             Class.forName("org.sqlite.JDBC");
-            String dbURL = "jdbc:sqlite:Schedlue.db";
+            String dbURL = "jdbc:sqlite:Schedule.db";
             Connection conn = DriverManager.getConnection(dbURL);
 
             if(conn != null){
@@ -112,8 +113,9 @@ public class DatabaseController {
                 String newEventTopic = newEvent.getTopic();
                 String newEventDetail = newEvent.getDetail();
 
-                String query = String.format("update events set date=\'%s\', topic=\'%s\', detail=\'%s\' where date=\'%s\' and topic=\'%s\'",
+                String query = String.format("update event set date=\'%s\', topic=\'%s\', datail=\'%s\' where date=\'%s\' and topic=\'%s\'",
                         newEventDate, newEventTopic, newEventDetail, oldEventDate, oldEventTopic);
+                System.out.println(query);
                 Statement statement = conn.createStatement();
                 statement.executeUpdate(query);
 

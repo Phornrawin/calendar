@@ -11,10 +11,13 @@ import javafx.stage.Stage;
 import javafx.util.StringConverter;
 import model.Event;
 import model.Schedule;
+import sun.util.BuddhistCalendar;
 
+import java.text.SimpleDateFormat;
 import java.time.Instant;
 import java.time.LocalDate;
 import java.time.ZoneId;
+import java.util.Calendar;
 import java.util.Date;
 
 /**
@@ -55,9 +58,18 @@ public class EditAndDeleteViewController {
             public void handle(ActionEvent event) {
                 System.out.println(choiceboxEvent.getValue());
                 oldEvent = (Event) choiceboxEvent.getValue();
-                datePickerEdit.getEditor().setText(oldEvent.getDateToString());
-                spinerHr.getEditor().setText(oldEvent.getDate().getHours() + "");
-                spinerMins.getEditor().setText(oldEvent.getDate().getMinutes() + "");
+                LocalDate oldLocalDate = oldEvent.getDate().toInstant().atZone(ZoneId.systemDefault()).toLocalDate();
+
+//                int oldYear = Integer.parseInt(new SimpleDateFormat("yyyy").format(oldEvent.getDate()));
+//                int oldMouth = Integer.parseInt(new SimpleDateFormat("MM").format(oldEvent.getDate()));
+//                int oldDay = Integer.parseInt(new SimpleDateFormat("dd").format(oldEvent.getDate()));
+                datePickerEdit.setValue(oldLocalDate);
+
+//                datePickerEdit.getEditor().setText(oldEvent.getDateToString());
+                int oldHr = Integer.parseInt(new SimpleDateFormat("HH").format(oldEvent.getDate()));
+                int oldMin = Integer.parseInt(new SimpleDateFormat("mm").format(oldEvent.getDate()));
+                spinerHr.getEditor().setText(oldHr + "");
+                spinerMins.getEditor().setText(oldMin + "");
                 textFieldTopic.setText(oldEvent.getTopic());
                 textAreaDetail.setText(oldEvent.getDetail());
 

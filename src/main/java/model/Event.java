@@ -17,7 +17,7 @@ public class Event {
         this.topic = topic;
         this.detail = detail;
         this.date = date;
-        this.format = new SimpleDateFormat("E, dd MMM yyyy HH:mm z");
+        this.format = new SimpleDateFormat("E dd MMM yyyy HH:mm z");
 
     }
 
