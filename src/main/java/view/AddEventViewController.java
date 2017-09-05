@@ -39,17 +39,25 @@ public class AddEventViewController {
         startTime.setMinutes(spinnerMins.getValue());
         String topic = textfieldTopic.getText();
         String detail = textAreaDetail.getText();
+        if(topic.equals("")){
+            showTopicWarning();
+        }else{
+            Event event = new Event(topic, detail, startTime);
+            controller.addEventToSchedule(event);
+            System.out.println("Add event to DB:\n" + event.toString());
+            mainView.initTextArea();
 
-        Event event = new Event(topic, detail, startTime);
-        controller.addEventToSchedule(event);
-        System.out.println("Add event to DB:\n" + event.toString());
-        mainView.initTextArea();
+            Stage stage = (Stage) textfieldTopic.getScene().getWindow();
+            stage.close();
+        }
 
-        Stage stage = (Stage) textfieldTopic.getScene().getWindow();
-        stage.close();
-
-
-
+    }
+    public void showTopicWarning(){
+        Alert alert = new Alert(Alert.AlertType.WARNING);
+        alert.setTitle("Warning Topic");
+        alert.setHeaderText("Look, You have not entered the topic text field yet.");
+        alert.setContentText("Please enter a message in the topic field.");
+        alert.showAndWait();
     }
 
     public void setController(MainController controller){

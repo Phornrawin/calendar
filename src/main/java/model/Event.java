@@ -2,6 +2,7 @@ package model;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.Locale;
 
 /**
  * Created by Phornrawin on 27/8/2560.
@@ -17,7 +18,7 @@ public class Event {
         this.topic = topic;
         this.detail = detail;
         this.date = date;
-        this.format = new SimpleDateFormat("E dd MMM yyyy HH:mm z");
+        this.format = new SimpleDateFormat("E dd MMM yyyy HH:mm", Locale.ENGLISH);
 
     }
 

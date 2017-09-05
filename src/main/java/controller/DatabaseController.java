@@ -133,5 +133,34 @@ public class DatabaseController {
 
     }
 
+    public boolean deleteDataFromDatabase(Event event){
+        try {
+            Class.forName("org.sqlite.JDBC");
+            String dbURL = "jdbc:sqlite:Schedule.db";
+            Connection conn = DriverManager.getConnection(dbURL);
+
+            if(conn != null){
+                System.out.println("Connected to the database...");
+                String date = dateFormat.format(event.getDate());
+                String topic = event.getTopic();
+
+                String query = String.format("DELETE FROM event WHERE date=\'%s\' and topic=\'%s\'", date, topic);
+                System.out.println(query);
+                Statement statement = conn.createStatement();
+                statement.executeUpdate(query);
+
+                conn.close();
+
+                return true;
+
+            }
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return false;
+    }
+
 
 }

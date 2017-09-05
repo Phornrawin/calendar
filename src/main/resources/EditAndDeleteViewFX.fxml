@@ -35,7 +35,7 @@
       <Label layoutX="47.0" layoutY="237.0" text="Detail:" />
       <TextArea fx:id="textAreaDetail" layoutX="64.0" layoutY="267.0" prefHeight="250.0" prefWidth="469.0" />
       <Button fx:id="btnEdit" layoutX="198.0" layoutY="536.0" mnemonicParsing="false" text="Edit" onAction="#onClickEdit" />
-      <Button fx:id="btnDelete" layoutX="327.0" layoutY="536.0" mnemonicParsing="false" text="Delete" />
+      <Button fx:id="btnDelete" layoutX="327.0" layoutY="536.0" mnemonicParsing="false" text="Delete" onAction="#onClickDelete"/>
       <ChoiceBox fx:id="choiceboxEvent" layoutX="233.0" layoutY="53.0" prefHeight="31.0" prefWidth="244.0" />
    </children>
 </AnchorPane>
