@@ -128,7 +128,7 @@ public class DatabaseController {
                 String newEventTopic = newEvent.getTopic();
                 String newEventDetail = newEvent.getDetail();
 
-                String query = String.format("update event set date=\'%s\', topic=\'%s\', datail=\'%s\' where date=\'%s\' and topic=\'%s\'",
+                String query = String.format("update event set date=\'%s\', topic=\'%s\', detail=\'%s\' where date=\'%s\' and topic=\'%s\'",
                         newEventDate, newEventTopic, newEventDetail, oldEventDate, oldEventTopic);
                 System.out.println(query);
                 Statement statement = conn.createStatement();
