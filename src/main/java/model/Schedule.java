@@ -26,6 +26,10 @@ public class Schedule {
         this.events = events;
     }
 
+    /**
+     * remove event from arraylist
+     * @param event
+     */
     public void removeEvent(Event event){
         for (Event e: events) {
             if(e.getDateToString().equals(event.getDateToString()) && e.getTopic().equals(event.getTopic())){

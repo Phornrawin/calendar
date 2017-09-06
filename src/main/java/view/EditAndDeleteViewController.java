@@ -98,23 +98,25 @@ public class EditAndDeleteViewController {
             }else {
                 return;
             }
-
         }
-
-
     }
 
     @FXML
     public void onClickDelete(){
         System.out.println("in onClickDelete method");
-        controller.getSchedule().removeEvent(oldEvent);
-        controller.getDbController().deleteDataFromDatabase(oldEvent);
-        Schedule schedule = controller.getDbController().loadDatafromDB();
-        controller.setSchedule(schedule);
-        mainView.initTextArea();
+        if(showEditDelete()){
+            controller.getSchedule().removeEvent(oldEvent);
+            controller.getDbController().deleteDataFromDatabase(oldEvent);
+            Schedule schedule = controller.getDbController().loadDatafromDB();
+            controller.setSchedule(schedule);
+            mainView.initTextArea();
 
-        Stage stage = (Stage) textFieldTopic.getScene().getWindow();
-        stage.close();
+            Stage stage = (Stage) textFieldTopic.getScene().getWindow();
+            stage.close();
+        }else {
+            return;
+        }
+
 
     }
 
@@ -140,12 +142,27 @@ public class EditAndDeleteViewController {
         }
     }
 
+    public boolean showEditDelete(){
+        Alert alert = new Alert(Alert.AlertType.WARNING);
+        alert.setTitle("Warning delete");
+        alert.setHeaderText("Do you want to delete?");
+        Optional<ButtonType> result = alert.showAndWait();
+//        ButtonType buttonTypeCancel = new ButtonType("Cancel", ButtonBar.ButtonData.CANCEL_CLOSE);
+//        alert.getButtonTypes().setAll(buttonTypeCancel);
+        if (result.get() == ButtonType.OK){
+            return true;
+        }else{
+            return false;
+        }
+    }
+
     public void setController(MainController controller){
         this.controller = controller;
         Schedule schedule = controller.getSchedule();
         for (Event e: schedule.getEvents()) {
             addElementToChoice(e);
         }
+        choiceboxEvent.getSelectionModel().selectFirst();
 
     }
 

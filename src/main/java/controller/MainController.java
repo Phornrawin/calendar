@@ -14,6 +14,11 @@ public class MainController {
         this.dbController = DatabaseController.getInstance();
         this.schedule = dbController.loadDatafromDB();
     }
+
+    /**
+     * add event to schedule and database
+     * @param event
+     */
     public void addEventToSchedule(Event event){
         schedule.addEvent(event);
         dbController.addDatatoDB(event);

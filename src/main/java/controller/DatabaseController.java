@@ -28,6 +28,10 @@ public class DatabaseController {
         return dbController;
     }
 
+    /**
+     * load record from database for build schedule
+     * @return schedule
+     */
     public Schedule loadDatafromDB(){
         try {
             Class.forName("org.sqlite.JDBC");
@@ -67,6 +71,11 @@ public class DatabaseController {
 
     }
 
+    /**
+     * add record to database
+     * @param event
+     *  @return boolean
+     */
     public boolean addDatatoDB(Event event) {
         try {
             Class.forName("org.sqlite.JDBC");
@@ -98,6 +107,12 @@ public class DatabaseController {
 
     }
 
+    /**
+     * update record when record was edited
+     * @param oldEvent
+     * @param newEvent
+     * @return boolean
+     */
     public boolean updateDatabase(Event oldEvent, Event newEvent){
         try {
             Class.forName("org.sqlite.JDBC");
@@ -133,6 +148,11 @@ public class DatabaseController {
 
     }
 
+    /**
+     * delete record from database
+     * @param event
+     * @return boolean
+     */
     public boolean deleteDataFromDatabase(Event event){
         try {
             Class.forName("org.sqlite.JDBC");

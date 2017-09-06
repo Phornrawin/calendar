@@ -33,6 +33,9 @@ public class MainViewController{
 
     }
 
+    /**
+     * set textArea is present
+     */
     public void initTextArea(){
         String s = "";
         Schedule schedule = controller.getSchedule();
@@ -104,7 +107,4 @@ public class MainViewController{
 
     }
 
-    public TextArea getShowEventTextArea(){
-        return showEventTextArea;
-    }
 }
