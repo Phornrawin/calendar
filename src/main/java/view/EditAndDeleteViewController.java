@@ -70,35 +70,35 @@ public class EditAndDeleteViewController {
 
     }
 
-    @FXML
-    public void onClickEdit(){
-        LocalDate localDate = datePickerEdit.getValue();
-        Instant instant = Instant.from(localDate.atStartOfDay(ZoneId.systemDefault()));
-        Date newDate = Date.from(instant);
-        newDate.setHours((Integer) spinerHr.getValue());
-        newDate.setMinutes((Integer) spinerMins.getValue());
-        String newTopic = textFieldTopic.getText();
-        String newDetail = textAreaDetail.getText();
-        if(newTopic.equals("")){
-            showTopicWarning();
-        }else{
-            if(showEditWarning()){
-                Event newEvent = new Event(newTopic, newDetail, newDate);
-
-                controller.getSchedule().removeEvent(oldEvent);
-                controller.getDbController().updateDatabase(oldEvent, newEvent);
-                Schedule schedule = controller.getDbController().loadDatafromDB();
-                controller.setSchedule(schedule);
-
-                mainView.initTextArea();
-
-                Stage stage = (Stage) textFieldTopic.getScene().getWindow();
-                stage.close();
-            }else {
-                return;
-            }
-        }
-    }
+//    @FXML
+//    public void onClickEdit(){
+//        LocalDate localDate = datePickerEdit.getValue();
+//        Instant instant = Instant.from(localDate.atStartOfDay(ZoneId.systemDefault()));
+//        Date newDate = Date.from(instant);
+//        newDate.setHours((Integer) spinerHr.getValue());
+//        newDate.setMinutes((Integer) spinerMins.getValue());
+//        String newTopic = textFieldTopic.getText();
+//        String newDetail = textAreaDetail.getText();
+//        if(newTopic.equals("")){
+//            showTopicWarning();
+//        }else{
+//            if(showEditWarning()){
+//                Event newEvent = new Event(newTopic, newDetail, newDate);
+//
+//                controller.getSchedule().removeEvent(oldEvent);
+//                controller.getDbController().updateDatabase(oldEvent, newEvent);
+//                Schedule schedule = controller.getDbController().loadDatafromDB();
+//                controller.setSchedule(schedule);
+//
+//                mainView.initTextArea();
+//
+//                Stage stage = (Stage) textFieldTopic.getScene().getWindow();
+//                stage.close();
+//            }else {
+//                return;
+//            }
+//        }
+//    }
 
     @FXML
     public void onClickDelete(){

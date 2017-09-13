@@ -18,6 +18,7 @@ import model.Event;
 import model.Schedule;
 
 import java.io.IOException;
+import java.util.ArrayList;
 
 /**
  * Created by Phornrawin on 30/8/2560.
@@ -39,7 +40,13 @@ public class MainViewController{
     public void initTextArea(){
         String s = "";
         Schedule schedule = controller.getSchedule();
-        for(Event e : schedule.getEvents()){
+        ArrayList<Event> events = new ArrayList<>();
+        events.addAll(schedule.getEvents());
+        events.addAll(schedule.getDailys());
+        events.addAll(schedule.getWeeklys());
+        events.addAll(schedule.getMonthlys());
+        events.addAll(schedule.getYearlys());
+        for(Event e : events){
             s += e.toString();
             s += "=====================\n";
         }

@@ -49,10 +49,11 @@ public class DatabaseController {
                     Date date = dateFormat.parse(resultSet.getString(1));
                     String topic = resultSet.getString(2);
                     String detail = resultSet.getString(3);
+                    String type = resultSet.getString(4);
 
-                    Event event = new Event(topic, detail, date);
+                    Event event = new Event(topic, detail, date, type);
                     schedule.addEvent(event);
-                    String s = String.format("Topic: %s\n" + "Detail: %s\n" + "Date&Time: %s",topic,detail,date);
+                    String s = String.format("Topic: %s\n" + "Detail: %s\n" + "Date&Time: %s" + "Type: %s",topic,detail,date,type);
                     System.out.println(s);
                 }
                 conn.close();
@@ -87,8 +88,9 @@ public class DatabaseController {
                 String date = dateFormat.format(event.getDate());
                 String topic = event.getTopic();
                 String detail = event.getDetail();
+                String type = event.getType();
 
-                String query = String.format("insert into event values (\'%s\', \'%s\', \'%s\')", date, topic, detail);
+                String query = String.format("insert into event values (\'%s\', \'%s\', \'%s\', \'%s\')", date, topic, detail, type);
                 System.out.println(query);
                 Statement statement = conn.createStatement();
                 statement.executeUpdate(query);
@@ -127,9 +129,10 @@ public class DatabaseController {
                 String newEventDate = dateFormat.format(newEvent.getDate());
                 String newEventTopic = newEvent.getTopic();
                 String newEventDetail = newEvent.getDetail();
+                String newEventType = newEvent.getType();
 
-                String query = String.format("update event set date=\'%s\', topic=\'%s\', detail=\'%s\' where date=\'%s\' and topic=\'%s\'",
-                        newEventDate, newEventTopic, newEventDetail, oldEventDate, oldEventTopic);
+                String query = String.format("update event set date=\'%s\', topic=\'%s\', detail=\'%s\', type=\'%s\' where date=\'%s\' and topic=\'%s\'",
+                        newEventDate, newEventTopic, newEventDetail, newEventType, oldEventDate, oldEventTopic);
                 System.out.println(query);
                 Statement statement = conn.createStatement();
                 statement.executeUpdate(query);

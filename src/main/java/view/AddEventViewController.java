@@ -1,10 +1,14 @@
 package view;
 
 import controller.MainController;
+import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
 import javafx.stage.Stage;
+import javafx.util.StringConverter;
 import model.Event;
+import model.EventType;
 
 import java.text.SimpleDateFormat;
 import java.time.Instant;
@@ -18,6 +22,7 @@ import java.util.Date;
 public class AddEventViewController {
     @FXML private DatePicker datePickerSelect;
     @FXML private Spinner<Integer> spinnerHour, spinnerMins;
+    @FXML private ChoiceBox choiceboxRepeat;
     @FXML private TextField textfieldTopic;
     @FXML private TextArea textAreaDetail;
     @FXML private Button btnAddEvent;
@@ -29,6 +34,15 @@ public class AddEventViewController {
     public void initialize(){
 
     }
+    
+    public void addElementToChoice(){
+        String eventTypes[] = {EventType.EMPTY, EventType.DAILY, EventType.WEEKLY, EventType.MONTHLY, EventType.YEARLY};
+        for(int i = 0; i < eventTypes.length; i++){
+            choiceboxRepeat.getItems().add(eventTypes[i]);
+        }
+        choiceboxRepeat.getSelectionModel().selectFirst();
+
+    }
 
     @FXML
     public void onClickAddEvent(){
@@ -37,12 +51,13 @@ public class AddEventViewController {
         Date startTime = Date.from(instant);
         startTime.setHours(spinnerHour.getValue());
         startTime.setMinutes(spinnerMins.getValue());
+        String type = choiceboxRepeat.getValue().toString();
         String topic = textfieldTopic.getText();
         String detail = textAreaDetail.getText();
         if(topic.equals("")){
             showTopicWarning();
         }else{
-            Event event = new Event(topic, detail, startTime);
+            Event event = new Event(topic, detail, startTime, type);
             controller.addEventToSchedule(event);
             System.out.println("Add event to DB:\n" + event.toString());
             mainView.initTextArea();
@@ -63,6 +78,7 @@ public class AddEventViewController {
     public void setController(MainController controller){
         this.controller = controller;
         datePickerSelect.setValue(LocalDate.now());
+        addElementToChoice();
 
     }
 

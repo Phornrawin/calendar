@@ -11,14 +11,18 @@ public class Event {
     private String topic, detail;
     private Date date;
     private SimpleDateFormat format;
+    private String type;
 
+    public String getType() {
+        return type;
+    }
 
-
-    public Event(String topic, String detail,Date date) {
+    public Event(String topic, String detail, Date date, String type) {
         this.topic = topic;
         this.detail = detail;
         this.date = date;
         this.format = new SimpleDateFormat("E dd MMM yyyy HH:mm", Locale.ENGLISH);
+        this.type = type;
 
     }
 
@@ -51,7 +55,7 @@ public class Event {
     }
 
     public String toString(){
-        return String.format("Date: %s\n" + "Topic: %s\n" + "Detail: %s\n", format.format(date), topic, detail);
+        return String.format("Date: %s\n" + "Topic: %s\n" + "Detail: %s\n" + "Type: %s\n", format.format(date), topic, detail, type);
     }
 
 

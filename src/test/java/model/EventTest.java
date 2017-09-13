@@ -15,13 +15,15 @@ public class EventTest {
     private String detail;
     private Date date;
     private Event event;
+    private String type;
 
     @Before
     public void setup(){
         topic = "topic test";
         detail = "detail test";
+        type = EventType.EMPTY;
         date = new Date();
-        event = new Event(topic, detail, date);
+        event = new Event(topic, detail, date, type);
     }
 
     @Test
