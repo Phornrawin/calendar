@@ -53,7 +53,7 @@ public class DatabaseController {
 
                     Event event = new Event(topic, detail, date, type);
                     schedule.addEvent(event);
-                    String s = String.format("Topic: %s\n" + "Detail: %s\n" + "Date&Time: %s" + "Type: %s",topic,detail,date,type);
+                    String s = String.format("Topic: %s\n" + "Detail: %s\n" + "Date&Time: %s\n" + "Type: %s",topic,detail,date,type);
                     System.out.println(s);
                 }
                 conn.close();

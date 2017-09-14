@@ -10,8 +10,9 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
+
 <?import java.lang.Integer?>
-<AnchorPane prefHeight="600.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.EditAndDeleteViewController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="630.0" prefWidth="592.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.EditAndDeleteViewController">
    <children>
       <fx:define>
          <Integer fx:id="minH" fx:value="0" />
@@ -19,23 +20,49 @@
          <Integer fx:id="minM" fx:value="0" />
          <Integer fx:id="maxM" fx:value="59" />
       </fx:define>
-      <Label layoutX="110.0" layoutY="53.0" text="Select Event:">
+      <Label layoutX="81.0" layoutY="41.0" text="Select Event:">
          <font>
-            <Font size="20.0" />
+            <Font size="18.0" />
          </font>
       </Label>
-      <DatePicker fx:id="datePickerEdit" layoutX="91.0" layoutY="108.0" prefHeight="31.0" prefWidth="192.0" />
-      <Label layoutX="46.0" layoutY="113.0" text="Date:" />
-      <Label layoutX="315.0" layoutY="113.0" text="Start time:" />
-      <Spinner fx:id="spinerHr" layoutX="390.0" layoutY="108.0" max="$maxH" min="$minH" prefHeight="31.0" prefWidth="78.0" />
-      <Label layoutX="481.0" layoutY="113.0" prefHeight="21.0" prefWidth="0.0" text=":" />
-      <Spinner fx:id="spinerMins" layoutX="500.0" layoutY="108.0" max="$maxM" min="$minM" prefHeight="31.0" prefWidth="78.0" />
-      <Label layoutX="44.0" layoutY="176.0" text="Topic:" />
-      <TextField fx:id="textFieldTopic" layoutX="110.0" layoutY="171.0" prefHeight="31.0" prefWidth="419.0" />
-      <Label layoutX="47.0" layoutY="237.0" text="Detail:" />
-      <TextArea fx:id="textAreaDetail" layoutX="64.0" layoutY="267.0" prefHeight="250.0" prefWidth="469.0" />
-      <Button fx:id="btnEdit" layoutX="198.0" layoutY="536.0" mnemonicParsing="false" text="Edit" onAction="#onClickEdit" />
-      <Button fx:id="btnDelete" layoutX="327.0" layoutY="536.0" mnemonicParsing="false" text="Delete" onAction="#onClickDelete"/>
-      <ChoiceBox fx:id="choiceboxEvent" layoutX="233.0" layoutY="53.0" prefHeight="31.0" prefWidth="244.0" />
+      <ChoiceBox fx:id="choiceboxEvent" layoutX="193.0" layoutY="39.0" prefHeight="31.0" prefWidth="335.0" />
+      <Label layoutX="34.0" layoutY="97.0" text="Date: ">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <DatePicker fx:id="datePickerEdit" layoutX="81.0" layoutY="95.0" prefHeight="31.0" prefWidth="202.0" />
+      <Label layoutX="296.0" layoutY="97.0" text="Start time:">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Spinner fx:id="spinnerHr" layoutX="387.0" layoutY="95.0" prefHeight="31.0" prefWidth="82.0" max="$maxH" min="$minH"/>
+      <Label layoutX="476.0" layoutY="97.0" text=":">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Spinner fx:id="spinnerMins" layoutX="487.0" layoutY="95.0" prefHeight="31.0" prefWidth="82.0" max="$maxM" min="$minM"/>
+      <Label layoutX="34.0" layoutY="156.0" text="Repeat Type:">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <ChoiceBox fx:id="choiceBoxRepeat" layoutX="146.0" layoutY="154.0" prefHeight="31.0" prefWidth="335.0" />
+      <Label layoutX="34.0" layoutY="214.0" text="Topic:">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <TextField fx:id="textFieldTopic" layoutX="100.0" layoutY="212.0" prefHeight="31.0" prefWidth="418.0" />
+      <Label layoutX="34.0" layoutY="271.0" text="Detail:">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <TextArea fx:id="textAreaDetail" layoutX="59.0" layoutY="298.0" prefHeight="254.0" prefWidth="484.0" />
+      <Button fx:id="btnEdit" layoutX="193.0" layoutY="575.0" mnemonicParsing="false" text="Edit" onAction="#onClickEdit"/>
+      <Button fx:id="btnDelete" layoutX="346.0" layoutY="575.0" mnemonicParsing="false" text="Delete" onAction="#onClickDelete"/>
    </children>
 </AnchorPane>

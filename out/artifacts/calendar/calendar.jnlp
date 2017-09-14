@@ -8,7 +8,7 @@
   </information>
   <resources>
     <j2se version="1.6+" href="http://java.sun.com/products/autodl/j2se"/>
-    <jar href="calendar.jar" size="19783" download="eager" />
+    <jar href="calendar.jar" size="22331" download="eager" />
     <jar href="hamcrest-core-1.3.jar" size="45024" download="eager" />
     <jar href="junit-4.12.jar" size="314932" download="eager" />
     <jar href="sqlite-jdbc-3.20.0.jar" size="6637012" download="eager" />

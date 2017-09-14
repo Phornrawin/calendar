@@ -8,6 +8,7 @@ import javafx.scene.control.*;
 import javafx.stage.Stage;
 import javafx.util.StringConverter;
 import model.Event;
+import model.EventType;
 import model.Schedule;
 
 import java.text.SimpleDateFormat;
@@ -23,7 +24,8 @@ import java.util.Optional;
 public class EditAndDeleteViewController {
     @FXML private ChoiceBox choiceboxEvent;
     @FXML private DatePicker datePickerEdit;
-    @FXML private Spinner spinerHr, spinerMins;
+    @FXML private Spinner spinnerHr, spinnerMins;
+    @FXML private ChoiceBox choiceBoxRepeat;
     @FXML private TextField textFieldTopic;
     @FXML private TextArea textAreaDetail;
     @FXML private Button btnEdit, btnDelete;
@@ -60,8 +62,9 @@ public class EditAndDeleteViewController {
 
                 int oldHr = Integer.parseInt(new SimpleDateFormat("HH").format(oldEvent.getDate()));
                 int oldMin = Integer.parseInt(new SimpleDateFormat("mm").format(oldEvent.getDate()));
-                spinerHr.getEditor().setText(oldHr + "");
-                spinerMins.getEditor().setText(oldMin + "");
+                spinnerHr.getEditor().setText(oldHr + "");
+                spinnerMins.getEditor().setText(oldMin + "");
+                choiceBoxRepeat.getSelectionModel().select(oldEvent.getType());
                 textFieldTopic.setText(oldEvent.getTopic());
                 textAreaDetail.setText(oldEvent.getDetail());
 
@@ -70,35 +73,36 @@ public class EditAndDeleteViewController {
 
     }
 
-//    @FXML
-//    public void onClickEdit(){
-//        LocalDate localDate = datePickerEdit.getValue();
-//        Instant instant = Instant.from(localDate.atStartOfDay(ZoneId.systemDefault()));
-//        Date newDate = Date.from(instant);
-//        newDate.setHours((Integer) spinerHr.getValue());
-//        newDate.setMinutes((Integer) spinerMins.getValue());
-//        String newTopic = textFieldTopic.getText();
-//        String newDetail = textAreaDetail.getText();
-//        if(newTopic.equals("")){
-//            showTopicWarning();
-//        }else{
-//            if(showEditWarning()){
-//                Event newEvent = new Event(newTopic, newDetail, newDate);
-//
-//                controller.getSchedule().removeEvent(oldEvent);
-//                controller.getDbController().updateDatabase(oldEvent, newEvent);
-//                Schedule schedule = controller.getDbController().loadDatafromDB();
-//                controller.setSchedule(schedule);
-//
-//                mainView.initTextArea();
-//
-//                Stage stage = (Stage) textFieldTopic.getScene().getWindow();
-//                stage.close();
-//            }else {
-//                return;
-//            }
-//        }
-//    }
+    @FXML
+    public void onClickEdit(){
+        LocalDate localDate = datePickerEdit.getValue();
+        Instant instant = Instant.from(localDate.atStartOfDay(ZoneId.systemDefault()));
+        Date newDate = Date.from(instant);
+        newDate.setHours((Integer) spinnerHr.getValue());
+        newDate.setMinutes((Integer) spinnerMins.getValue());
+        String newType = choiceBoxRepeat.getValue().toString();
+        String newTopic = textFieldTopic.getText();
+        String newDetail = textAreaDetail.getText();
+        if(newTopic.equals("")){
+            showTopicWarning();
+        }else{
+            if(showEditWarning()){
+                Event newEvent = new Event(newTopic, newDetail, newDate, newType);
+
+                controller.getSchedule().removeEvent(oldEvent);
+                controller.getDbController().updateDatabase(oldEvent, newEvent);
+                Schedule schedule = controller.getDbController().loadDatafromDB();
+                controller.setSchedule(schedule);
+
+                mainView.initTextArea();
+
+                Stage stage = (Stage) textFieldTopic.getScene().getWindow();
+                stage.close();
+            }else {
+                return;
+            }
+        }
+    }
 
     @FXML
     public void onClickDelete(){
@@ -154,6 +158,14 @@ public class EditAndDeleteViewController {
             return false;
         }
     }
+    public void addElementToChoiceRepeat(){
+        String eventTypes[] = {EventType.EMPTY, EventType.DAILY, EventType.WEEKLY, EventType.MONTHLY, EventType.YEARLY};
+        for(int i = 0; i < eventTypes.length; i++){
+            choiceBoxRepeat.getItems().add(eventTypes[i]);
+        }
+        choiceBoxRepeat.getSelectionModel().selectFirst();
+
+    }
 
     public void setController(MainController controller){
         this.controller = controller;
@@ -162,6 +174,8 @@ public class EditAndDeleteViewController {
             addElementToChoice(e);
         }
         choiceboxEvent.getSelectionModel().selectFirst();
+        addElementToChoiceRepeat();
+
 
     }
 
