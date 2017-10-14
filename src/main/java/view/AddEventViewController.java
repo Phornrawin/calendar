@@ -60,7 +60,7 @@ public class AddEventViewController {
             Event event = new Event(topic, detail, startTime, type);
             controller.addEventToSchedule(event);
             System.out.println("Add event to DB:\n" + event.toString());
-            mainView.initTextArea();
+            mainView.initTextArea(new Date());
 
             Stage stage = (Stage) textfieldTopic.getScene().getWindow();
             stage.close();

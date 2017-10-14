@@ -39,42 +39,22 @@ public class Schedule {
 
         return events;
     }
-
-    public void setEvents(ArrayList<Event> events) {
-        this.events = events;
-    }
-
     public ArrayList<Event> getDailys() {
         return dailys;
-    }
-
-    public void setDailys(ArrayList<Event> dailys) {
-        this.dailys = dailys;
     }
 
     public ArrayList<Event> getWeeklys() {
         return weeklys;
     }
 
-    public void setWeeklys(ArrayList<Event> weeklys) {
-        this.weeklys = weeklys;
-    }
-
     public ArrayList<Event> getMonthlys() {
         return monthlys;
-    }
-
-    public void setMonthlys(ArrayList<Event> monthlys) {
-        this.monthlys = monthlys;
     }
 
     public ArrayList<Event> getYearlys() {
         return yearlys;
     }
 
-    public void setYearlys(ArrayList<Event> yearlys) {
-        this.yearlys = yearlys;
-    }
 
     /**
      * remove event from arraylist

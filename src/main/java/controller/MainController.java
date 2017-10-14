@@ -28,10 +28,6 @@ public class MainController {
         return dbController;
     }
 
-    public void setDbController(DatabaseController dbController) {
-        this.dbController = dbController;
-    }
-
     public Schedule getSchedule() {
 
         return schedule;

@@ -15,6 +15,7 @@ import java.text.SimpleDateFormat;
 import java.time.Instant;
 import java.time.LocalDate;
 import java.time.ZoneId;
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.Optional;
 
@@ -28,7 +29,6 @@ public class EditAndDeleteViewController {
     @FXML private ChoiceBox choiceBoxRepeat;
     @FXML private TextField textFieldTopic;
     @FXML private TextArea textAreaDetail;
-    @FXML private Button btnEdit, btnDelete;
     private Event oldEvent;
     private MainController controller;
     private MainViewController mainView;
@@ -43,6 +43,7 @@ public class EditAndDeleteViewController {
             @Override
             public String toString(Object object) {
                 Event event = (Event) object;
+                System.out.println(event.getDateToString() + " "+ event.getTopic());
                 return event.getDateToString() + " "+ event.getTopic();
             }
 
@@ -94,7 +95,7 @@ public class EditAndDeleteViewController {
                 Schedule schedule = controller.getDbController().loadDatafromDB();
                 controller.setSchedule(schedule);
 
-                mainView.initTextArea();
+                mainView.initTextArea(new Date());
 
                 Stage stage = (Stage) textFieldTopic.getScene().getWindow();
                 stage.close();
@@ -112,7 +113,7 @@ public class EditAndDeleteViewController {
             controller.getDbController().deleteDataFromDatabase(oldEvent);
             Schedule schedule = controller.getDbController().loadDatafromDB();
             controller.setSchedule(schedule);
-            mainView.initTextArea();
+            mainView.initTextArea(new Date());
 
             Stage stage = (Stage) textFieldTopic.getScene().getWindow();
             stage.close();
@@ -150,8 +151,7 @@ public class EditAndDeleteViewController {
         alert.setTitle("Warning delete");
         alert.setHeaderText("Do you want to delete?");
         Optional<ButtonType> result = alert.showAndWait();
-//        ButtonType buttonTypeCancel = new ButtonType("Cancel", ButtonBar.ButtonData.CANCEL_CLOSE);
-//        alert.getButtonTypes().setAll(buttonTypeCancel);
+
         if (result.get() == ButtonType.OK){
             return true;
         }else{
@@ -162,17 +162,28 @@ public class EditAndDeleteViewController {
         String eventTypes[] = {EventType.EMPTY, EventType.DAILY, EventType.WEEKLY, EventType.MONTHLY, EventType.YEARLY};
         for(int i = 0; i < eventTypes.length; i++){
             choiceBoxRepeat.getItems().add(eventTypes[i]);
+            System.out.println();
         }
         choiceBoxRepeat.getSelectionModel().selectFirst();
 
     }
 
+    public void getListEvent(ArrayList<Event> events){
+        for (Event e: events) {
+            System.out.println("add to edit: \n" + e.toString());
+            addElementToChoice(e);
+            }
+        }
+
     public void setController(MainController controller){
         this.controller = controller;
-        Schedule schedule = controller.getSchedule();
-        for (Event e: schedule.getEvents()) {
-            addElementToChoice(e);
-        }
+
+        getListEvent(this.controller.getSchedule().getEvents());
+        getListEvent(this.controller.getSchedule().getDailys());
+        getListEvent(this.controller.getSchedule().getMonthlys());
+        getListEvent(this.controller.getSchedule().getWeeklys());
+        getListEvent(this.controller.getSchedule().getYearlys());
+
         choiceboxEvent.getSelectionModel().selectFirst();
         addElementToChoiceRepeat();
 

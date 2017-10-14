@@ -3,30 +3,35 @@ package view;
 import controller.MainController;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
+import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
-import javafx.scene.control.Button;
-import javafx.scene.control.DatePicker;
-import javafx.scene.control.Label;
-import javafx.scene.control.TextArea;
+import javafx.scene.control.*;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.Pane;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
 import model.Event;
+import model.EventType;
 import model.Schedule;
 
 import java.io.IOException;
+import java.text.SimpleDateFormat;
+import java.time.Instant;
+import java.time.LocalDate;
+import java.time.ZoneId;
 import java.util.ArrayList;
+import java.util.Date;
 
 /**
  * Created by Phornrawin on 30/8/2560.
  */
 public class MainViewController{
     @FXML private TextArea showEventTextArea;
-    @FXML private Button btnAddEvent;
-    @FXML private Button btnEditAndDelete;
+    @FXML private DatePicker datepickerSelectDay;
+    private ArrayList<Event> events;
     private MainController controller;
 
     @FXML
@@ -37,22 +42,43 @@ public class MainViewController{
     /**
      * set textArea is present
      */
-    public void initTextArea(){
+    public void initTextArea(Date date){
         String s = "";
-        Schedule schedule = controller.getSchedule();
-        ArrayList<Event> events = new ArrayList<>();
-        events.addAll(schedule.getEvents());
-        events.addAll(schedule.getDailys());
-        events.addAll(schedule.getWeeklys());
-        events.addAll(schedule.getMonthlys());
-        events.addAll(schedule.getYearlys());
-        for(Event e : events){
+        events = new ArrayList<>();
+        events.addAll(controller.getSchedule().getEvents());
+        events.addAll(controller.getSchedule().getDailys());
+        events.addAll(controller.getSchedule().getWeeklys());
+        events.addAll(controller.getSchedule().getMonthlys());
+        events.addAll(controller.getSchedule().getYearlys());
+        ArrayList<Event> selectDays = showEventByDate(date, events);
+        for(Event e : selectDays){
             s += e.toString();
             s += "=====================\n";
         }
         showEventTextArea.setText(s);
         showEventTextArea.setEditable(false);
 
+    }
+
+    public ArrayList<Event> showEventByDate(Date date, ArrayList<Event> events){
+        ArrayList<Event> e = new ArrayList<>();
+        for (Event i : events) {
+            if (new SimpleDateFormat("E dd MMM yyyy").format(i.getDate()).equals(new SimpleDateFormat("E dd MMM yyyy").format(date))){
+                e.add(i);
+            }else if(i.getType().equals(EventType.DAILY)){
+                e.add(i);
+            }else if(i.getType().equals(EventType.WEEKLY) &&
+                    new SimpleDateFormat("E").format(i.getDate()).equals(new SimpleDateFormat("E").format(date))){
+                e.add(i);
+            }else if(i.getType().equals(EventType.MONTHLY) &&
+                    new SimpleDateFormat("dd").format(i.getDate()).equals(new SimpleDateFormat("dd").format(date))){
+                e.add(i);
+            }else if(i.getType().equals(EventType.YEARLY) &&
+                    new SimpleDateFormat("dd MMM").format(i.getDate()).equals(new SimpleDateFormat("dd MMM").format(date))){
+                e.add(i);
+            }
+        }
+        return e;
     }
 
 
@@ -92,6 +118,9 @@ public class MainViewController{
             Pane layout = (AnchorPane) loader.load();
             EditAndDeleteViewController editView = loader.getController();
             editView.setController(controller);
+            for (Event e: controller.getSchedule().getEvents()) {
+                System.out.println("in onClickEdit method: \n" + e.toString());
+            }
             editView.setMainView(this);
 
             Scene scene = new Scene(layout);
@@ -108,9 +137,26 @@ public class MainViewController{
 
     }
 
+    public void setOnActionForDatePicker(){
+        datepickerSelectDay.setOnAction(new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent event) {
+                LocalDate localDate = datepickerSelectDay.getValue();
+                Instant instant = Instant.from(localDate.atStartOfDay(ZoneId.systemDefault()));
+                Date selectDay = Date.from(instant);
+                initTextArea(selectDay);
+            }
+        });
+    }
+
     public void setController(MainController controller){
         this.controller = controller;
-        initTextArea();
+        datepickerSelectDay.setValue(LocalDate.now());
+        setOnActionForDatePicker();
+        LocalDate localDate = datepickerSelectDay.getValue();
+        Instant instant = Instant.from(localDate.atStartOfDay(ZoneId.systemDefault()));
+        Date today = Date.from(instant);
+        initTextArea(today);
 
     }
 
