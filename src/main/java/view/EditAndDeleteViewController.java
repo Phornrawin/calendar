@@ -37,6 +37,11 @@ public class EditAndDeleteViewController {
     public void initialize(){
 
     }
+
+    /**
+     * add event to choicebox
+     * @param element
+     */
     public void addElementToChoice(Event element){
         choiceboxEvent.getItems().add(element);
         choiceboxEvent.setConverter(new StringConverter() {
@@ -74,6 +79,9 @@ public class EditAndDeleteViewController {
 
     }
 
+    /**
+     * set action listener edit button
+     */
     @FXML
     public void onClickEdit(){
         LocalDate localDate = datePickerEdit.getValue();
@@ -105,6 +113,9 @@ public class EditAndDeleteViewController {
         }
     }
 
+    /**
+     * set action listener delete button
+     */
     @FXML
     public void onClickDelete(){
         System.out.println("in onClickDelete method");
@@ -123,6 +134,9 @@ public class EditAndDeleteViewController {
 
 
     }
+    /**
+     * create topic warning alert dialog
+     */
 
     public void showTopicWarning(){
         Alert alert = new Alert(Alert.AlertType.WARNING);
@@ -132,13 +146,14 @@ public class EditAndDeleteViewController {
         alert.showAndWait();
     }
 
+    /**
+     * create edit warning alert dialog
+     */
     public boolean showEditWarning(){
         Alert alert = new Alert(Alert.AlertType.WARNING);
         alert.setTitle("Warning Edit");
         alert.setHeaderText("Do you want to fix?");
         Optional<ButtonType> result = alert.showAndWait();
-//        ButtonType buttonTypeCancel = new ButtonType("Cancel", ButtonBar.ButtonData.CANCEL_CLOSE);
-//        alert.getButtonTypes().setAll(buttonTypeCancel);
         if (result.get() == ButtonType.OK){
             return true;
         }else{
@@ -146,6 +161,9 @@ public class EditAndDeleteViewController {
         }
     }
 
+    /**
+     * create delete warning alert dialog
+     */
     public boolean showEditDelete(){
         Alert alert = new Alert(Alert.AlertType.WARNING);
         alert.setTitle("Warning delete");
@@ -158,6 +176,10 @@ public class EditAndDeleteViewController {
             return false;
         }
     }
+
+    /**
+     * add event type to choicebox
+     */
     public void addElementToChoiceRepeat(){
         String eventTypes[] = {EventType.EMPTY, EventType.DAILY, EventType.WEEKLY, EventType.MONTHLY, EventType.YEARLY};
         for(int i = 0; i < eventTypes.length; i++){
@@ -168,6 +190,10 @@ public class EditAndDeleteViewController {
 
     }
 
+    /**
+     * get and add event list to choicebox
+     * @param events
+     */
     public void getListEvent(ArrayList<Event> events){
         for (Event e: events) {
             System.out.println("add to edit: \n" + e.toString());

@@ -34,7 +34,10 @@ public class AddEventViewController {
     public void initialize(){
 
     }
-    
+
+    /**
+     * add event type to choicebox
+     */
     public void addElementToChoice(){
         String eventTypes[] = {EventType.EMPTY, EventType.DAILY, EventType.WEEKLY, EventType.MONTHLY, EventType.YEARLY};
         for(int i = 0; i < eventTypes.length; i++){
@@ -44,6 +47,9 @@ public class AddEventViewController {
 
     }
 
+    /**
+     * set action listener add event button
+     */
     @FXML
     public void onClickAddEvent(){
         LocalDate localDate = datePickerSelect.getValue();
@@ -67,6 +73,10 @@ public class AddEventViewController {
         }
 
     }
+
+    /**
+     * create topic warning alert dialog
+     */
     public void showTopicWarning(){
         Alert alert = new Alert(Alert.AlertType.WARNING);
         alert.setTitle("Warning Topic");

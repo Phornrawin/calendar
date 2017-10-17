@@ -21,6 +21,11 @@ public class Schedule {
         this.yearlys = new ArrayList<>();
     }
 
+    /**
+     *
+     * add Event to list by type repetition
+     * @param event
+     */
     public void addEvent(Event event){
         if(EventType.EMPTY.equals(event.getType())){
             this.events.add(event);

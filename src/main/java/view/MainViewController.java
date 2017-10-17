@@ -60,6 +60,12 @@ public class MainViewController{
 
     }
 
+    /**
+     * add Event to array by repetition
+     * @param date
+     * @param events
+     * @return
+     */
     public ArrayList<Event> showEventByDate(Date date, ArrayList<Event> events){
         ArrayList<Event> e = new ArrayList<>();
         for (Event i : events) {
@@ -82,6 +88,9 @@ public class MainViewController{
     }
 
 
+    /**
+     * set action listener new event button
+     */
     @FXML
     public void onClickNewEvent(){
         try {
@@ -108,6 +117,9 @@ public class MainViewController{
         }
     }
 
+    /**
+     * set action listener edit and delete button
+     */
     @FXML
     public void onClickEditAndDelete(){
         try {
@@ -137,6 +149,9 @@ public class MainViewController{
 
     }
 
+    /**
+     * set action listener datepicker
+     */
     public void setOnActionForDatePicker(){
         datepickerSelectDay.setOnAction(new EventHandler<ActionEvent>() {
             @Override
@@ -148,6 +163,7 @@ public class MainViewController{
             }
         });
     }
+
 
     public void setController(MainController controller){
         this.controller = controller;
