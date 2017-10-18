@@ -79,9 +79,7 @@ public class DatabaseController {
      */
     public boolean addDatatoDB(Event event) {
         try {
-            Class.forName("org.sqlite.JDBC");
-            String dbURL = "jdbc:sqlite:Schedule.db";
-            Connection conn = DriverManager.getConnection(dbURL);
+            Connection conn = setURLDatabase("jdbc:sqlite:Schedule.db");
 
             if(conn != null){
                 System.out.println("Connected to the database....");
@@ -100,8 +98,6 @@ public class DatabaseController {
                 return true;
 
             }
-        } catch (ClassNotFoundException e) {
-            e.printStackTrace();
         } catch (SQLException e) {
             e.printStackTrace();
         }
@@ -185,5 +181,24 @@ public class DatabaseController {
         return false;
     }
 
+    /**
+     * set and prepare Connection
+     * @param url
+     * @return
+     */
+    public Connection setURLDatabase(String url){
+        try {
+            Class.forName("org.sqlite.JDBC");
+            Connection conn = DriverManager.getConnection(url);
+
+            return conn;
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
+        return null;
+    }
 
 }
