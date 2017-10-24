@@ -61,7 +61,7 @@ public class MainViewController{
     }
 
     /**
-     * add Event to array by repetition
+     * add Event to array by repetition ++
      * @param date
      * @param events
      * @return

@@ -34,9 +34,7 @@ public class DatabaseController {
      */
     public Schedule loadDatafromDB(){
         try {
-            Class.forName("org.sqlite.JDBC");
-            String dbURL = "jdbc:sqlite:Schedule.db";
-            Connection conn = DriverManager.getConnection(dbURL);
+            Connection conn = setURLDatabase("jdbc:sqlite:Schedule.db");
             if(conn != null){
                 System.out.println("Connected to the database....");
 
@@ -61,8 +59,6 @@ public class DatabaseController {
 
             }
 
-        } catch (ClassNotFoundException e) {
-            e.printStackTrace();
         } catch (SQLException e) {
             e.printStackTrace();
         } catch (ParseException e) {
@@ -113,9 +109,7 @@ public class DatabaseController {
      */
     public boolean updateDatabase(Event oldEvent, Event newEvent){
         try {
-            Class.forName("org.sqlite.JDBC");
-            String dbURL = "jdbc:sqlite:Schedule.db";
-            Connection conn = DriverManager.getConnection(dbURL);
+            Connection conn = setURLDatabase("jdbc:sqlite:Schedule.db");
 
             if(conn != null){
                 System.out.println("Connected to the database...");
@@ -137,8 +131,6 @@ public class DatabaseController {
 
                 return true;
             }
-        } catch (ClassNotFoundException e) {
-            e.printStackTrace();
         } catch (SQLException e) {
             e.printStackTrace();
         }
@@ -154,9 +146,7 @@ public class DatabaseController {
      */
     public boolean deleteDataFromDatabase(Event event){
         try {
-            Class.forName("org.sqlite.JDBC");
-            String dbURL = "jdbc:sqlite:Schedule.db";
-            Connection conn = DriverManager.getConnection(dbURL);
+            Connection conn = setURLDatabase("jdbc:sqlite:Schedule.db");
 
             if(conn != null){
                 System.out.println("Connected to the database...");
@@ -173,9 +163,7 @@ public class DatabaseController {
                 return true;
 
             }
-        } catch (ClassNotFoundException e) {
-            e.printStackTrace();
-        } catch (SQLException e) {
+        }  catch (SQLException e) {
             e.printStackTrace();
         }
         return false;

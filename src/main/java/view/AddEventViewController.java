@@ -25,10 +25,8 @@ public class AddEventViewController {
     @FXML private ChoiceBox choiceboxRepeat;
     @FXML private TextField textfieldTopic;
     @FXML private TextArea textAreaDetail;
-    @FXML private Button btnAddEvent;
     private MainController controller;
     private  MainViewController mainView;
-
 
     @FXML
     public void initialize(){

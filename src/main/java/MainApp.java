@@ -9,6 +9,8 @@ import javafx.scene.Scene;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
 import view.MainViewController;
 
 import java.io.IOException;
@@ -28,7 +30,9 @@ public class MainApp extends Application {
     public void start(Stage primaryStage) {
         this.primaryStage = primaryStage;
         this.primaryStage.setTitle("Appointment Schedule");
-        this.controller = new MainController();
+        ApplicationContext bf = new ClassPathXmlApplicationContext("mainapp.xml");
+        this.controller = (MainController) bf.getBean("controller");
+//        this.controller = new MainController();
         this.controller.startControll();
         initMainLayout();
     }
