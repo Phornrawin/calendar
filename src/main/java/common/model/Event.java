@@ -1,5 +1,6 @@
-package model;
+package common.model;
 
+import java.io.Serializable;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Locale;
@@ -7,7 +8,7 @@ import java.util.Locale;
 /**
  * Created by Phornrawin on 27/8/2560.
  */
-public class Event {
+public class Event implements Serializable{
     private String topic, detail;
     private Date date;
     private SimpleDateFormat format;

@@ -1,7 +1,8 @@
-package controller;
+package server;
 
-import model.Event;
-import model.Schedule;
+import common.DatabaseManager;
+import common.model.Event;
+import common.model.Schedule;
 
 import java.sql.*;
 import java.text.ParseException;
@@ -12,7 +13,7 @@ import java.util.Locale;
 /**
  * Created by Phornrawin on 2/9/2560.
  */
-public class DatabaseController {
+public class DatabaseController implements DatabaseManager{
     private static DatabaseController dbController;
     private SimpleDateFormat dateFormat;
 
@@ -37,7 +38,6 @@ public class DatabaseController {
             Connection conn = setURLDatabase("jdbc:sqlite:Schedule.db");
             if(conn != null){
                 System.out.println("Connected to the database....");
-
                 String query = "Select * from event";
                 Statement statement = conn.createStatement();
                 ResultSet resultSet = statement.executeQuery(query);

@@ -1,15 +1,15 @@
-package view;
+package client.view;
 
-import controller.MainController;
+import client.MainController;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
 import javafx.stage.Stage;
 import javafx.util.StringConverter;
-import model.Event;
-import model.EventType;
-import model.Schedule;
+import common.model.Event;
+import common.model.EventType;
+import common.model.Schedule;
 
 import java.text.SimpleDateFormat;
 import java.time.Instant;

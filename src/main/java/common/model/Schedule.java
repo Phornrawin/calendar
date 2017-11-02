@@ -1,12 +1,12 @@
-package model;
+package common.model;
 
+import java.io.Serializable;
 import java.util.ArrayList;
-import java.util.Date;
 
 /**
  * Created by Phornrawin on 27/8/2560.
  */
-public class Schedule {
+public class Schedule implements Serializable{
     private ArrayList<Event> events;
     private ArrayList<Event> dailys;
     private ArrayList<Event> weeklys;

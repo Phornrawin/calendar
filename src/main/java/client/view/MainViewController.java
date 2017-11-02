@@ -1,8 +1,6 @@
-package view;
+package client.view;
 
-import controller.MainController;
-import javafx.collections.FXCollections;
-import javafx.collections.ObservableList;
+import client.MainController;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
@@ -13,9 +11,8 @@ import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.Pane;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
-import model.Event;
-import model.EventType;
-import model.Schedule;
+import common.model.Event;
+import common.model.EventType;
 
 import java.io.IOException;
 import java.text.SimpleDateFormat;

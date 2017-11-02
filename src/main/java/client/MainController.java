@@ -1,7 +1,9 @@
-package controller;
+package client;
 
-import model.Event;
-import model.Schedule;
+import common.DatabaseManager;
+import common.model.Event;
+import common.model.Schedule;
+import server.DatabaseController;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
@@ -10,11 +12,9 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
  */
 public class MainController {
     private Schedule schedule;
-    private DatabaseController dbController;
+    private DatabaseManager dbController;
 
-    public void startControll(){
-        ApplicationContext bf = new ClassPathXmlApplicationContext("maincon.xml");
-        this.dbController = (DatabaseController) bf.getBean("dbController");
+    public void startControll() throws Exception{
         this.schedule = dbController.loadDatafromDB();
     }
 
@@ -27,8 +27,12 @@ public class MainController {
         dbController.addDatatoDB(event);
     }
 
-    public DatabaseController getDbController() {
+    public DatabaseManager getDbController() {
         return dbController;
+    }
+
+    public void setDbController(DatabaseManager dbController) {
+        this.dbController = dbController;
     }
 
     public Schedule getSchedule() {

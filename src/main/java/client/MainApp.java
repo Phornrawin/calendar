@@ -1,8 +1,7 @@
-/**
+package client; /**
  * Created by Phornrawin on 30/8/2560.
  */
 
-import controller.MainController;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
@@ -11,7 +10,7 @@ import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
-import view.MainViewController;
+import client.view.MainViewController;
 
 import java.io.IOException;
 
@@ -27,12 +26,13 @@ public class MainApp extends Application {
     }
 
     @Override
-    public void start(Stage primaryStage) {
+    public void start(Stage primaryStage) throws Exception{
         this.primaryStage = primaryStage;
         this.primaryStage.setTitle("Appointment Schedule");
-        ApplicationContext bf = new ClassPathXmlApplicationContext("mainapp.xml");
-        this.controller = (MainController) bf.getBean("controller");
-//        this.controller = new MainController();
+        ApplicationContext bf = new ClassPathXmlApplicationContext("client-config.xml");
+        this.controller = (MainController) bf.getBean("server");
+
+//        this.server.controller = new MainController();
         this.controller.startControll();
         initMainLayout();
     }

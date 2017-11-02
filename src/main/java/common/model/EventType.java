@@ -1,6 +1,8 @@
-package model;
+package common.model;
 
-public final class EventType {
+import java.io.Serializable;
+
+public final class EventType implements Serializable{
     public static final String EMPTY = "never";
     public static final String DAILY = "daily";
     public static final String WEEKLY = "weekly";

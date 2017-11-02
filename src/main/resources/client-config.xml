@@ -1,0 +1,14 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+                            http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+    <bean id="db-server"
+          class="org.springframework.remoting.rmi.RmiProxyFactoryBean">
+        <property name="serviceUrl" value="rmi://localhost/xxx" />
+        <property name="serviceInterface" value="common.DatabaseManager" />
+    </bean>
+    <bean id="server" class="client.MainController">
+        <property name="dbController" ref="db-server"/>
+    </bean>
+
+</beans>

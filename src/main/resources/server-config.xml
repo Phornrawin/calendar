@@ -1,0 +1,14 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+                            http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+
+    <bean id="db-server" class="server.DatabaseController"  factory-method="getInstance" lazy-init="false"/>
+
+    <bean class="org.springframework.remoting.rmi.RmiServiceExporter">
+        <property name="service" ref="db-server"/>
+        <property name="serviceName" value="xxx"/>
+        <property name="serviceInterface" value="common.DatabaseManager"/>
+        <property name="registryPort" value="1099"/>
+    </bean>
+</beans>
